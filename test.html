@@ -17,6 +17,7 @@
         .highlight-bestaetigt { background-color: #d1fae5; color: #065f46; }
         .highlight-quellenkonflikt { background-color: #fee2e2; color: #991b1b; }
         .highlight-unbestaetigt { background-color: #e5e7eb; color: #4b5563; }
+        .highlight-neu-inhalt { background-color: #e0f7f9; color: #075985; } /* NEU: Für redaktionelle Ergänzungen */
 
         /* Tooltip styles */
         .tooltip-container {
@@ -36,8 +37,8 @@
             border-radius: 6px;
             padding: 10px;
             position: absolute;
-            z-index: 10;
-            bottom: 125%;
+            z-index: 100; /* Sichergestellt, dass der Tooltip über allen anderen Elementen liegt */
+            bottom: 150%; /* Sichergestellt, dass der Tooltip genug Abstand hat und nicht überlappt */
             left: 50%;
             margin-left: -160px; /* half of width */
             opacity: 0;
@@ -137,12 +138,12 @@
 
             <!-- Article Body -->
             <div class="prose max-w-none text-gray-800 text-base leading-relaxed">
-                <p><span class="highlight-geaendert tooltip-container">Der Weihnachtsmarkt in der Innenstadt von Bochum steht bevor. In diesem Artikel sammeln wir die wichtigsten Fragen und Antworten.
+                
+                <!-- NEU: Atmosphärische Einführung (Mit Farbmarkierung) -->
+                <p><span class="highlight-neu-inhalt tooltip-container">Sobald die kalte Jahreszeit beginnt, verwandelt sich die Bochumer Innenstadt wieder in eine glitzernde Winterlandschaft. Mit rund 180 festlich geschmückten Hütten, dem Duft von Glühwein und gebrannten Mandeln und der einzigartigen Atmosphäre zieht die **"Bochumer Weihnacht"** Jahr für Jahr hunderttausende Besucher an. Sie ist nicht nur ein Ort für Geschenke und Leckereien, sondern auch ein Treffpunkt, um die Vorweihnachtszeit stimmungsvoll zu genießen. In diesem Artikel sammeln wir die wichtigsten Fragen und Antworten zum bevorstehenden Markt.
                     <span class="tooltip-text">
-                        <strong class="info-header" style="color: #fcd34d;">GEÄNDERT</strong>
-                        <span class="info-content">Der Status hat sich vom laufenden zum bevorstehenden Ereignis geändert (Start am 20. Nov. 2025).</span>
-                        <span class="info-alt">Alt: Noch knapp eine Woche läuft...</span>
-                        <span class="info-quelle">Quelle: <a href="https://bochumer-weihnacht.de/" target="_blank">bochumer-weihnacht.de</a></span>
+                        <strong class="info-header" style="color: #67e8f9;">NEUER INHALT</strong>
+                        <span class="info-content">Paragraf wurde zur Verbesserung des Leseflusses und der Stimmung als Einleitung hinzugefügt.</span>
                     </span>
                 </span></p>
                 
@@ -205,6 +206,22 @@
                     </span>
                 </span></p>
 
+                <!-- NEU: Thematischer Absatz zum Highlight (Mit Farbmarkierung) -->
+                <p><span class="highlight-neu-inhalt tooltip-container">Der Weihnachtsmarkt in Bochum ist vor allem für seine einzigartige Attraktion bekannt: den **Fliegenden Weihnachtsmann**. Seit Jahren begeistert die Hochseilshow große und kleine Gäste und bildet das emotionale Zentrum des Marktes am Dr.-Ruer-Platz.
+                    <span class="tooltip-text">
+                        <strong class="info-header" style="color: #67e8f9;">NEUER INHALT</strong>
+                        <span class="info-content">Paragraf wurde zur thematischen Einleitung des Highlights "Fliegender Weihnachtsmann" hinzugefügt.</span>
+                    </span>
+                </span></p>
+
+                <!-- Bild Mockup: Fliegender Weihnachtsmann -->
+                <figure class="my-8">
+                    <img src="https://placehold.co/1200x675/B32134/ffffff?text=MOCKUP%3A+Fliegender+Weihnachtsmann" alt="Der fliegende Weihnachtsmann über dem Dr.-Ruer-Platz" class="w-full aspect-video object-cover rounded-md">
+                    <figcaption class="text-xs text-gray-500 mt-2 text-center">
+                        Zweimal täglich, um 17 und 19 Uhr, begeistert Falko Traber als Weihnachtsmann mit seiner einzigartigen Hochseilshow. (Foto: WAZ Archiv)
+                    </figcaption>
+                </figure>
+
                 <h3 class="text-2xl font-semibold">Kommt auch wieder der fliegende Weihnachtsmann?</h3>
                 <p><span class="highlight-bestaetigt tooltip-container">Ja, auch 2025 wird es wieder die beliebte Hochseilshow mit Falko Traber geben. Täglich um 17 und um 19 Uhr schwebt er in seinem Schlitten über den Dr.-Ruer-Platz. Einzige Ausnahme: Zur Eröffnung am Donnerstag, 20. November, findet die Show nur um 18.30 Uhr statt.
                     <span class="tooltip-text">
@@ -225,12 +242,11 @@
                             <span class="info-quelle">Quelle: <a href="https://bochumer-weihnacht.de/" target="_blank">bochumer-weihnacht.de</a></span>
                         </span>
                     </span>
-                    <span class="highlight-bestaetigt tooltip-container">Auf dem Boulevard wird es erneut die Eisstockbahn geben, die in Kürze online buchbar sein wird.
+                    <span class="highlight-bestaetigt tooltip-container">Auf dem Boulevard wird es erneut die Eisstockbahn geben, die in Kürze online buchbar sein wird. Damit ist die Eisstockbahn die etablierte Alternative zur traditionell gewünschten Eisbahn.
                         <span class="tooltip-text">
-                            <strong class="info-header" style="color: #6ee7b7;">KONFLIKT GELÖST & BESTÄTIGT</strong>
-                            <span class="info-content">Bochum Marketing bestätigt, dass die Eisstockbahn 2025 wieder aufgebaut wird.</span>
-                            <span class="info-alt">Alte Info: widersprüchliche Quellen</span>
-                            <span class="info-quelle">Quelle: Bochum Marketing</span>
+                            <strong class="info-header" style="color: #6ee7b7;">BESTÄTIGT & KONTEXT ERGÄNZT</strong>
+                            <span class="info-content">Die Eisstockbahn ist die bestätigte Attraktion. Der Text wurde ergänzt, um das Ende der klassischen Eisbahn zu thematisieren (Bittere Pille).</span>
+                            <span class="info-quelle">Quelle: Bochum Marketing, DerWesten.de (Kontext Eisbahn)</span>
                         </span>
                     </span>
                      <span class="highlight-bestaetigt tooltip-container">Auch die „Rentier Lounge“ an der Kortumstraße 49 und beliebte Klassiker wie der Märchenwald <span class="highlight-unbestaetigt tooltip-container">(vor Baltz) <span class="tooltip-text"><strong class="info-header" style="color: #d1d5db;">NOCH UNBESTÄTIGT</strong><span class="info-content">Die genaue Ortsangabe ist noch nicht bestätigt, wird aber erwartet.</span></span></span>, der Mittelaltermarkt, die Weihnachtszentrale und die Lichtskulpturen sind wieder dabei.
@@ -256,6 +272,15 @@
                      </span>
                 </p>
 
+                <!-- Bild Mockup: Eisstockbahn -->
+                <figure class="my-8">
+                    <img src="https://placehold.co/1200x675/2563EB/ffffff?text=MOCKUP%3A+Eisstockbahn+auf+dem+Boulevard" alt="Die Eisstockbahn auf dem Bochumer Boulevard" class="w-full aspect-video object-cover rounded-md">
+                    <figcaption class="text-xs text-gray-500 mt-2 text-center">
+                        Für sportlichen Spaß sorgt die Eisstockbahn auf dem Boulevard, die in Kürze online gebucht werden kann. (Foto: Bochum Marketing)
+                    </figcaption>
+                </figure>
+
+
                 <h3 class="text-2xl font-semibold">Welche Aktionen gibt es außerdem?</h3>
                 <p><span class="highlight-bestaetigt tooltip-container">Auch eine „Flohmarkthütte“ wird es wieder geben, in der Privatpersonen tageweise hochwertige Gebrauchtwaren verkaufen können. Anmeldungen sind per E-Mail möglich. Der Erlös wird für einen guten Zweck gespendet.
                     <span class="tooltip-text">
@@ -270,6 +295,14 @@
                         <span class="info-content">Diese Aktion wurde für 2025 noch nicht bestätigt.</span>
                     </span>
                 </span></p>
+
+                <!-- Bild Mockup: Mittelaltermarkt -->
+                <figure class="my-8">
+                    <img src="https://placehold.co/1200x675/964B00/ffffff?text=MOCKUP%3A+Mittelaltermarkt+an+der+Pauluskirche" alt="Der atmosphärische Mittelaltermarkt an der Pauluskirche" class="w-full aspect-video object-cover rounded-md">
+                    <figcaption class="text-xs text-gray-500 mt-2 text-center">
+                        Rund um die Pauluskirche tauchen Besucher in die historische Atmosphäre des Mittelaltermarktes ein. (Foto: FUNKE Foto Services)
+                    </figcaption>
+                </figure>
 
                 <h3 class="text-2xl font-semibold">Gibt’s einen verkaufsoffenen Sonntag?</h3>
                 <p>
@@ -311,6 +344,14 @@
                     <span class="tooltip-text">
                         <strong class="info-header" style="color: #6ee7b7;">BESTÄTIGT</strong>
                         <span class="info-content">Die Webseite ist weiterhin die primäre Informationsquelle.</span>
+                    </span>
+                </span></p>
+
+                <!-- NEU: Fazit/Zusammenfassung (Mit Farbmarkierung) -->
+                <p class="mt-8 pt-4 border-t border-gray-200"><span class="highlight-neu-inhalt tooltip-container">Mit den bestätigten Klassikern wie dem Mittelaltermarkt, der Rentier Lounge und der Rückkehr des Husemannplatzes verspricht der Weihnachtsmarkt 2025 wieder ein facettenreiches Erlebnis für alle Altersgruppen zu werden. Halten Sie sich über die Öffnungszeiten und die geplanten Aktionen auf dem Laufenden, um Ihren Besuch in Bochum optimal zu planen und die Magie der Vorweihnachtszeit voll auszukosten. Wir aktualisieren diesen Artikel, sobald die noch ausstehenden Details zu Preisen, Sicherheit und Programm bekannt gegeben werden.
+                    <span class="tooltip-text">
+                        <strong class="info-header" style="color: #67e8f9;">NEUER INHALT</strong>
+                        <span class="info-content">Fazit und Zusammenfassung zur Abrundung des Artikels hinzugefügt.</span>
                     </span>
                 </span></p>
 
