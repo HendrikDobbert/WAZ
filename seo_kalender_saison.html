@@ -1,0 +1,953 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vollständiger SEO Kalender – Bochum</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FUNKE CI Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        /* =================================================================
+         * GRUNDLAGEN & THEME-DEFINITION (FUNKE CI)
+         * =================================================================
+         */
+        :root {
+            /* -- Basis-Farbpalette (FUNKE) -- */
+            --funke-red-base: #ED1C24;
+            --funke-red-hover-base: #C81219;
+            --funke-black: #1A1A1A;
+            --funke-dark-gray: #333333;
+            --funke-medium-gray: #6C757D;
+            --funke-light-gray: #E9ECEF;
+            --funke-off-white: #F8F9FA;
+            --funke-white: #FFFFFF;
+
+            /* -- Semantische Farbvariablen -- */
+            --bg-primary: var(--funke-off-white); /* Hintergrund */
+            --bg-card: var(--funke-white);
+            --bg-interactive: #F1F3F5;
+            --border-color: var(--funke-light-gray);
+            --text-primary: var(--funke-black);
+            --text-secondary: var(--funke-medium-gray);
+            --accent-primary: var(--funke-red-base);
+            --accent-primary-hover: var(--funke-red-hover-base);
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+        }
+        
+        /* =================================================================
+         * KOMPONENTEN-STILE (CI-Adaption)
+         * =================================================================
+         */
+
+        .brand-heading {
+            font-weight: 800;
+            color: var(--text-primary);
+        }
+
+        .section-card {
+            background-color: var(--bg-card);
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03), 0 1px 2px rgba(0, 0, 0, 0.06);
+            border: 1px solid var(--border-color);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+        .section-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.04), 0 1px 3px rgba(0, 0, 0, 0.08);
+        }
+
+        .text-accent-primary { color: var(--accent-primary); }
+        .hover\:text-accent-primary-hover:hover { color: var(--accent-primary-hover); }
+
+        .month-header {
+            grid-column: 1 / -1;
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+            border-bottom: 2px solid var(--accent-primary);
+            padding-bottom: 0.5rem;
+        }
+    </style>
+</head>
+<body class="antialiased">
+    <div class="container mx-auto p-4 sm:p-8">
+        <header class="mb-8 text-center">
+            <h1 class="text-4xl brand-heading mb-2">Vollständiger SEO Kalender: Bochum</h1>
+            <p class="text-xl mb-2" style="color: var(--text-secondary);">Übersicht aller Event- und Saison-Artikel für die Jahresplanung</p>
+            <nav class="flex gap-4 justify-center mt-2">
+                <a href="seo_kalender.html" class="text-accent-primary hover:text-accent-primary-hover font-semibold text-sm">SEO Kalender</a>
+                <a href="seo_kalender_saison.html" class="text-accent-primary hover:text-accent-primary-hover font-semibold text-sm underline">Saison-Kalender</a>
+                <a href="seo_kalender_evergreen.html" class="text-accent-primary hover:text-accent-primary-hover font-semibold text-sm">Evergreen-Katalog</a>
+                <a href="seo_birdseye.html" class="text-accent-primary hover:text-accent-primary-hover font-semibold text-sm">Birds-Eye</a>
+            </nav>
+        </header>
+
+        <div id="article-list" class="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+
+            <!-- ======================= JANUAR ======================= -->
+            <div id="januar" class="month-header">
+                <h2 class="text-3xl font-extrabold" style="color: var(--text-primary);">Januar</h2>
+            </div>
+
+            <div class="section-card">
+                <h2 class="text-2xl font-bold mb-2" style="color: var(--text-primary);">Menü Karussell</h2>
+                <p class="text-sm mb-3" style="color: var(--text-secondary);">Sichtbarkeit: 0,06% | Keyword: <span class="font-semibold">menü karussell bochum</span></p>
+                <a href="https://www.waz.de/lokales/bochum/article408175578/menue-karussell-in-bochum-herne-das-bieten-die--restaurants.html" target="_blank" class="text-accent-primary hover:text-accent-primary-hover text-sm break-all">Link zur Quelle</a>
+                <hr class="my-4" style="border-color: var(--border-color);">
+                <h3 class="font-bold text-lg text-accent-primary mb-2">Begründung für Republish</h3>
+                <p style="color: var(--text-primary);">
+                    <span class="font-bold block mb-1">Update-Empfehlung: November/Dezember</span>
+                    Jährliches Genuss-Event. Ein frühzeitiges Update mit den neuen Restaurants, Menüs und Preisen ist entscheidend, um das hohe Suchvolumen zum Jahresstart abzugreifen.
+                </p>
+            </div>
+
+            <div class="section-card">
+                <h2 class="text-2xl font-bold mb-2" style="color: var(--text-primary);">Hub: Karneval in Bochum</h2>
+                <p class="text-sm mb-3" style="color: var(--text-secondary);">Sichtbarkeit: bis 0,64% | Keywords: <span class="font-semibold">rosenmontagszug bochum, karnevalsumzug höntrop</span></p>
+                <a href="https://www.waz.de/lokales/bochum/article408031220/karneval-2025bochum--wattenscheid-rosenmontag-umzug-termine-partys.html" target="_blank" class="text-accent-primary hover:text-accent-primary-hover text-sm break-all">Link zur Hauptquelle (Übersicht)</a>
+                
+                <button data-toggle-button aria-expanded="false" aria-controls="karneval-links" class="mt-3 text-accent-primary hover:text-accent-primary-hover text-sm font-semibold flex items-center gap-1 border-none bg-transparent p-0 cursor-pointer focus:outline-none focus:ring-0">
+                    <span class="underline">Quellen anzeigen</span>
+                    <svg data-toggle-icon class="w-4 h-4 text-accent-primary transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </button>
+                <div id="karneval-links" class="hidden max-h-0 overflow-hidden transition-all duration-300 mt-3 space-y-2 p-3 rounded-md" style="background-color: var(--bg-interactive); border: 1px solid var(--border-color);">
+                    <p class="font-bold text-sm mb-1" style="color: var(--text-primary);">Unterartikel:</p>
+                    <a href="https://www.waz.de/lokales/bochum/article405696535/karneval-in-hoentrop-die-infos-zum-umzug-der-gaensereiter.html" target="_blank" class="block text-sm text-accent-primary hover:text-accent-primary-hover break-all">Karneval in Höntrop (0,07%)</a>
+                </div>
+
+                <hr class="my-4" style="border-color: var(--border-color);">
+                <h3 class="font-bold text-lg text-accent-primary mb-2">Begründung für Hub-Artikel</h3>
+                <p style="color: var(--text-primary);">
+                    <span class="font-bold block mb-1">Update-Empfehlung: Dezember</span>
+                    Ein zentraler Hub bündelt alle Infos zu Zügen (Höntrop, Linden) und Partys. Dies schafft maximale Sichtbarkeit und dient als Hauptanlaufstelle zur Karnevalssession.
+                </p>
+            </div>
+
+            <div class="section-card">
+                <h2 class="text-2xl font-bold mb-2" style="color: var(--text-primary);">Günstige Abiball-Kleider</h2>
+                <p class="text-sm mb-3" style="color: var(--text-secondary);">Sichtbarkeit: 0,02% | Keyword: <span class="font-semibold">abendkleider verleih bochum</span></p>
+                <a href="https://www.waz.de/lokales/bochum/article408947602/guenstige-abiball-kleider-in-bochum-finden-fuenf-tipps.html" target="_blank" class="text-accent-primary hover:text-accent-primary-hover text-sm break-all">Link zur Quelle</a>
+                <hr class="my-4" style="border-color: var(--border-color);">
+                <h3 class="font-bold text-lg text-accent-primary mb-2">Begründung für Republish</h3>
+                <p style="color: var(--text-primary);">
+                    <span class="font-bold block mb-1">Update-Empfehlung: Januar</span>
+                    Jährlich vor der Abitur-Saison die Liste der Second-Hand-Läden, Verleihe und günstigen Boutiquen aktualisieren, um das Ranking zu verbessern.
+                </p>
+            </div>
+            
+            <div class="section-card">
+                <h2 class="text-2xl font-bold mb-2" style="color: var(--text-primary);">Tannenbaum-Abholung</h2>
+                <p class="text-sm mb-3" style="color: var(--text-secondary);">Sichtbarkeit: bis 0,24% | Keyword: <span class="font-semibold">weihnachtsbaumabholung bochum</span></p>
+                <a href="https://www.waz.de/lokales/bochum/article405500513/tannenbaum-abholung-usb-bochum-wattenscheid-2025.html" target="_blank" class="text-accent-primary hover:text-accent-primary-hover text-sm break-all">Link zur Quelle</a>
+                <hr class="my-4" style="border-color: var(--border-color);">
+                <h3 class="font-bold text-lg text-accent-primary mb-2">Begründung für Republish</h3>
+                <p style="color: var(--text-primary);">
+                    <span class="font-bold block mb-1">Update-Empfehlung: Dezember</span>
+                    Essenzieller Service-Artikel mit extrem hohem, zeitlich begrenztem Suchvolumen. Die Abfrage der neuen USB-Termine ist absolut notwendig.
+                </p>
+            </div>
+
+            <!-- ======================= FEBRUAR ======================= -->
+            <div id="februar" class="month-header">
+                <h2 class="text-3xl font-extrabold" style="color: var(--text-primary);">Februar</h2>
+            </div>
+            
+            <div class="section-card">
+                <h2 class="text-2xl font-bold mb-2" style="color: var(--text-primary);">Valentinstag Tipps</h2>
+                <p class="text-sm mb-3" style="color: var(--text-secondary);">Sichtbarkeit: 0,49% | Keyword: <span class="font-semibold">date ideen bochum</span></p>
+                <a href="https://www.waz.de/lokales/bochum/article404205044/valentinstag-wo-paare-in-bochum-hingehen-koennen.html" target="_blank" class="text-accent-primary hover:text-accent-primary-hover text-sm break-all">Link zur Quelle</a>
+                <hr class="my-4" style="border-color: var(--border-color);">
+                <h3 class="font-bold text-lg text-accent-primary mb-2">Begründung für Republish</h3>
+                <p style="color: var(--text-primary);">
+                    <span class="font-bold block mb-1">Update-Empfehlung: Dezember/Januar</span>
+                    Klassischer saisonaler Ratgeber. Eine komplette Neufassung mit frischen Ideen für Dates (Restaurants, Aktivitäten, Ausflüge) ist nötig, um das Ranking zu halten.
+                </p>
+            </div>
+
+            <div class="section-card">
+                <h2 class="text-2xl font-bold mb-2" style="color: var(--text-primary);">Historischer Jahrmarkt</h2>
+                <p class="text-sm mb-3" style="color: var(--text-secondary);">Sichtbarkeit: 0,05% | Keyword: <span class="font-semibold">historischer jahrmarkt bochum</span></p>
+                <a href="https://www.waz.de/lokales/bochum/article408235807/historischer-jahrmarkt-in-bochum-xxx.html" target="_blank" class="text-accent-primary hover:text-accent-primary-hover text-sm break-all">Link zur Quelle</a>
+                <hr class="my-4" style="border-color: var(--border-color);">
+                <h3 class="font-bold text-lg text-accent-primary mb-2">Begründung für Republish</h3>
+                <p style="color: var(--text-primary);">
+                    <span class="font-bold block mb-1">Update-Empfehlung: Dezember/Januar</span>
+                    Jährliches Top-Event in der Jahrhunderthalle. Aktualität bei Programm, Preisen und Öffnungszeiten ist für den Service-Wert unerlässlich.
+                </p>
+            </div>
+
+            <div class="section-card">
+                <h2 class="text-2xl font-bold mb-2" style="color: var(--text-primary);">Hub: Gertrudis Kirmes</h2>
+                <p class="text-sm mb-3" style="color: var(--text-secondary);">Sichtbarkeit: bis 0,22% | Keywords: <span class="font-semibold">gertrudis kirmes, wattenscheider kirmes</span></p>
+                <a href="https://www.waz.de/lokales/bochum/article408482671/bochums-erste-kirmes-des-jahres-wann-familien-sparen-koennen.html" target="_blank" class="text-accent-primary hover:text-accent-primary-hover text-sm break-all">Link zur Hauptquelle (Übersicht)</a>
+
+                <button data-toggle-button aria-expanded="false" aria-controls="gertrudis-links" class="mt-3 text-accent-primary hover:text-accent-primary-hover text-sm font-semibold flex items-center gap-1 border-none bg-transparent p-0 cursor-pointer focus:outline-none focus:ring-0">
+                    <span class="underline">Quellen anzeigen</span>
+                    <svg data-toggle-icon class="w-4 h-4 text-accent-primary transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </button>
+                <div id="gertrudis-links" class="hidden max-h-0 overflow-hidden transition-all duration-300 mt-3 space-y-2 p-3 rounded-md" style="background-color: var(--bg-interactive); border: 1px solid var(--border-color);">
+                    <p class="font-bold text-sm mb-1" style="color: var(--text-primary);">Unterartikel:</p>
+                    <a href="https://www.waz.de/lokales/bochum/article408562642/gertrudiskirmes-2025-das-kosten-essen-und-fahrgeschaefte.html" target="_blank" class="block text-sm text-accent-primary hover:text-accent-primary-hover break-all">Preise für Essen & Fahrgeschäfte (0,01%)</a>
+                </div>
+
+                <hr class="my-4" style="border-color: var(--border-color);">
+                <h3 class="font-bold text-lg text-accent-primary mb-2">Begründung für Hub-Artikel</h3>
+                <p style="color: var(--text-primary);">
+                    <span class="font-bold block mb-1">Update-Empfehlung: Dezember/Januar</span>
+                    Als erste Kirmes des Jahres verdient das Event einen umfassenden Hub mit Terminen, Aktionen und Preisen.
+                </p>
+            </div>
+            
+            <div class="section-card">
+                <h2 class="text-2xl font-bold mb-2" style="color: var(--text-primary);">Zuckerfest</h2>
+                <p class="text-sm mb-3" style="color: var(--text-secondary);">Sichtbarkeit: 0,00% | Keyword: <span class="font-semibold">zuckerfest spezialitäten</span></p>
+                <a href="https://www.waz.de/lokales/bochum/article401985742/zuckerfest-so-feiern-bochums-muslime-das-ende-des-ramadans.html" target="_blank" class="text-accent-primary hover:text-accent-primary-hover text-sm break-all">Link zur Quelle</a>
+                <hr class="my-4" style="border-color: var(--border-color);">
+                <h3 class="font-bold text-lg text-accent-primary mb-2">Begründung für Republish</h3>
+                <p style="color: var(--text-primary);">
+                    <span class="font-bold block mb-1">Update-Empfehlung: Januar/Februar</span>
+                    Klassisches Saisonthema, das jährlich mit Infos, Terminen der Moscheen und Hintergründen aktualisiert werden kann, um das Ranking zu verbessern.
+                </p>
+            </div>
+            
+            <div class="section-card">
+                <h2 class="text-2xl font-bold mb-2" style="color: var(--text-primary);">Kunstmesse WAT kreativ</h2>
+                <p class="text-sm mb-3" style="color: var(--text-secondary);">Sichtbarkeit: 0,03% | Keyword: <span class="font-semibold">kreativmarkt wattenscheid</span></p>
+                <a href="https://www.waz.de/lokales/bochum/article408283155/kunst-messe-in-wattenscheid-das-bietet-wat-kreativ-2025.html" target="_blank" class="text-accent-primary hover:text-accent-primary-hover text-sm break-all">Link zur Quelle</a>
+                <hr class="my-4" style="border-color: var(--border-color);">
+                <h3 class="font-bold text-lg text-accent-primary mb-2">Begründung für Republish</h3>
+                <p style="color: var(--text-primary);">
+                    <span class="font-bold block mb-1">Update-Empfehlung: Januar</span>
+                    Wiederkehrendes lokales Event. Mit neuen Terminen und Ausstellern aktualisieren, um die Daten aktuell zu halten.
+                </p>
+            </div>
+
+
+            <!-- ======================= MÄRZ ======================= -->
+            <div id="maerz" class="month-header">
+                <h2 class="text-3xl font-extrabold" style="color: var(--text-primary);">März</h2>
+            </div>
+            
+            <div class="section-card">
+                <h2 class="text-2xl font-bold mb-2" style="color: var(--text-primary);">Hub: Feierabend- & Moltkemärkte</h2>
+                <p class="text-sm mb-3" style="color: var(--text-secondary);">Sichtbarkeit: bis 0,27% | Keywords: <span class="font-semibold">moltkemarkt bochum, feierabendmarkt bochum</span></p>
+                <a href="https://www.waz.de/lokales/bochum/article408505664/moltkemarkt-wieder-da-29-fotos-vom-beliebten-feierabendmarkt.htmi" target="_blank" class="text-accent-primary hover:text-accent-primary-hover text-sm break-all">Link zur Hauptquelle</a>
+                
+                <button data-toggle-button aria-expanded="false" aria-controls="feierabend-links" class="mt-3 text-accent-primary hover:text-accent-primary-hover text-sm font-semibold flex items-center gap-1 border-none bg-transparent p-0 cursor-pointer focus:outline-none focus:ring-0">
+                    <span class="underline">Quellen anzeigen</span>
+                    <svg data-toggle-icon class="w-4 h-4 text-accent-primary transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </button>
+                <div id="feierabend-links" class="hidden max-h-0 overflow-hidden transition-all duration-300 mt-3 space-y-2 p-3 rounded-md" style="background-color: var(--bg-interactive); border: 1px solid var(--border-color);">
+                    <p class="font-bold text-sm mb-1" style="color: var(--text-primary);">Unterartikel:</p>
+                    <a href="https://www.waz.de/lokales/bochum/article408666007/feierabendmarkt-an-der-lohnhalle-21-bilder-von-der-premiere.html" target="_blank" class="block text-sm text-accent-primary hover:text-accent-primary-hover break-all">Feierabendmarkt Lohnhalle (0,05%)</a>
+                </div>
+
+                <hr class="my-4" style="border-color: var(--border-color);">
+                <h3 class="font-bold text-lg text-accent-primary mb-2">Begründung für Hub-Artikel</h3>
+                <p style="color: var(--text-primary);">
+                    <span class="font-bold block mb-1">Update-Empfehlung: Januar/Februar</span>
+                    Extrem beliebte, saisonale Events. Ein zentraler Artikel mit den Startterminen und Besonderheiten aller Märkte ist ein Traffic-Garant im Frühling.
+                </p>
+            </div>
+
+            <div class="section-card">
+                <h2 class="text-2xl font-bold mb-2" style="color: var(--text-primary);">Hub: Ostern in Bochum</h2>
+                <p class="text-sm mb-3" style="color: var(--text-secondary);">Sichtbarkeit: bis 0,84% | Keyword: <span class="font-semibold">welcher bäcker hat karfreitag geöffnet</span></p>
+                <a href="https://www.waz.de/lokales/bochum/article408688446/frische-broetchen-zu-ostern-diese-baeckereien-haben-geoeffnet.html" target="_blank" class="text-accent-primary hover:text-accent-primary-hover text-sm break-all">Link zur Hauptquelle (Bäcker)</a>
+                
+                <button data-toggle-button aria-expanded="false" aria-controls="ostern-links" class="mt-3 text-accent-primary hover:text-accent-primary-hover text-sm font-semibold flex items-center gap-1 border-none bg-transparent p-0 cursor-pointer focus:outline-none focus:ring-0">
+                    <span class="underline">Quellen anzeigen</span>
+                    <svg data-toggle-icon class="w-4 h-4 text-accent-primary transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </button>
+                <div id="ostern-links" class="hidden max-h-0 overflow-hidden transition-all duration-300 mt-3 space-y-2 p-3 rounded-md" style="background-color: var(--bg-interactive); border: 1px solid var(--border-color);">
+                    <p class="font-bold text-sm mb-1" style="color: var(--text-primary);">Unterartikel:</p>
+                    <a href="https://www.waz.de/lokales/bochum/article408761716/osterkirmes-2025-in-bochum-waz-verlost-gutschein-pakete.html" target="_blank" class="block text-sm text-accent-primary hover:text-accent-primary-hover break-all">Osterkirmes (0,01%)</a>
+                    <a href="https://www.waz.de/lokales/bochum/article408787310/osterferien-in-bochum-acht-freizeittipps-fuer-familien.html" target="_blank" class="block text-sm text-accent-primary hover:text-accent-primary-hover break-all">Osterferien-Tipps (0,01%)</a>
+                </div>
+
+                <hr class="my-4" style="border-color: var(--border-color);">
+                <h3 class="font-bold text-lg text-accent-primary mb-2">Begründung für Hub-Artikel</h3>
+                <p style="color: var(--text-primary);">
+                    <span class="font-bold block mb-1">Update-Empfehlung: Februar/März</span>
+                    Ostern bündelt viele Service-Themen. Ein Hub-Artikel fasst Bäcker-Öffnungszeiten, Kirmes-Termine und Ferientipps zusammen und maximiert die Sichtbarkeit.
+                </p>
+            </div>
+
+            <div class="section-card">
+                <h2 class="text-2xl font-bold mb-2" style="color: var(--text-primary);">Eisenbahnmuseum Saisonstart</h2>
+                <p class="text-sm mb-3" style="color: var(--text-secondary);">Sichtbarkeit: 0,01% | Keyword: <span class="font-semibold">eisenbahnmuseum dahlhausen öffnungszeiten</span></p>
+                <a href="https://www.waz.de/lokales/bochum/article408436725/eisenbahnmuseum-in-bochum-startet-in-die-saison-das-ist-neu.html" target="_blank" class="text-accent-primary hover:text-accent-primary-hover text-sm break-all">Link zur Quelle</a>
+                <hr class="my-4" style="border-color: var(--border-color);">
+                <h3 class="font-bold text-lg text-accent-primary mb-2">Begründung für Republish</h3>
+                <p style="color: var(--text-primary);">
+                    <span class="font-bold block mb-1">Update-Empfehlung: Februar</span>
+                    Wichtige Institution mit saisonalem Betrieb. Ein Service-Artikel mit Öffnungszeiten, Preisen und neuen Exponaten ist ideal.
+                </p>
+            </div>
+
+            <div class="section-card">
+                <h2 class="text-2xl font-bold mb-2" style="color: var(--text-primary);">Eisdielen Saisonstart</h2>
+                <p class="text-sm mb-3" style="color: var(--text-secondary);">Sichtbarkeit: 0,00% | Keyword: <span class="font-semibold">kugelpudel preise</span></p>
+                <a href="https://www.waz.de/lokales/bochum/article408363503/bochums-eisdielen-starten-in-die-saison-preise-die-trends.html" target="_blank" class="text-accent-primary hover:text-accent-primary-hover text-sm break-all">Link zur Quelle</a>
+                <hr class="my-4" style="border-color: var(--border-color);">
+                <h3 class="font-bold text-lg text-accent-primary mb-2">Begründung für Republish</h3>
+                <p style="color: var(--text-primary);">
+                    <span class="font-bold block mb-1">Update-Empfehlung: Februar</span>
+                    Klassisches Saisonthema. Jährlich mit neuen Preisen, Sorten und Eisdielen aktualisieren in einer Komplett-Neufassung.
+                </p>
+            </div>
+
+
+            <!-- ======================= APRIL ======================= -->
+            <div id="april" class="month-header">
+                <h2 class="text-3xl font-extrabold" style="color: var(--text-primary);">April</h2>
+            </div>
+
+            <div class="section-card">
+                <h2 class="text-2xl font-bold mb-2" style="color: var(--text-primary);">Freibadsaison</h2>
+                <p class="text-sm mb-3" style="color: var(--text-secondary);">Sichtbarkeit: 0,11% | Keyword: <span class="font-semibold">bochum freibad</span></p>
+                <a href="https://www.waz.de/lokales/bochum/article408796075/freibadsaison-2025-in-bochum-termine-preise-neuerungen.html" target="_blank" class="text-accent-primary hover:text-accent-primary-hover text-sm break-all">Link zur Quelle</a>
+                <hr class="my-4" style="border-color: var(--border-color);">
+                <h3 class="font-bold text-lg text-accent-primary mb-2">Begründung für Republish</h3>
+                <p style="color: var(--text-primary);">
+                    <span class="font-bold block mb-1">Update-Empfehlung: Februar/März</span>
+                    Essenzieller saisonaler Artikel. Pünktlich vor Saisonstart müssen alle neuen Infos (Preise, Termine, Neuerungen) recherchiert werden.
+                </p>
+            </div>
+
+            <div class="section-card">
+                <h2 class="text-2xl font-bold mb-2" style="color: var(--text-primary);">Öffentliches Grillen</h2>
+                <p class="text-sm mb-3" style="color: var(--text-secondary);">Sichtbarkeit: 0,09% | Keyword: <span class="font-semibold">westpark bochum grillen</span></p>
+                <a href="https://www.waz.de/lokales/bochum/article406510492/oeffentliches-grillen-in-bochum-wo-es-erlaubt-ist-wo-nicht.html" target="_blank" class="text-accent-primary hover:text-accent-primary-hover text-sm break-all">Link zur Quelle</a>
+                <hr class="my-4" style="border-color: var(--border-color);">
+                <h3 class="font-bold text-lg text-accent-primary mb-2">Begründung für Republish</h3>
+                <p style="color: var(--text-primary);">
+                    <span class="font-bold block mb-1">Update-Empfehlung: März</span>
+                    Saisonal relevantes Thema. Mit aktuellen Regeln und Orten aktualisieren, um die Daten aktuell zu halten.
+                </p>
+            </div>
+
+            <div class="section-card">
+                <h2 class="text-2xl font-bold mb-2" style="color: var(--text-primary);">Maiabendfest</h2>
+                <p class="text-sm mb-3" style="color: var(--text-secondary);">Sichtbarkeit: 0,25% | Keyword: <span class="font-semibold">programm maischützen bochum</span></p>
+                <a href="https://www.waz.de/lokales/bochum/article408583758/maiabendfest-warum-vfi-legende-leon-goretzka-dabei-ist.html" target="_blank" class="text-accent-primary hover:text-accent-primary-hover text-sm break-all">Link zur Quelle</a>
+                <hr class="my-4" style="border-color: var(--border-color);">
+                <h3 class="font-bold text-lg text-accent-primary mb-2">Begründung für Republish</h3>
+                <p style="color: var(--text-primary);">
+                    <span class="font-bold block mb-1">Update-Empfehlung: März</span>
+                    Wichtiges Bochumer Traditionsfest. Der Artikel muss mit dem neuen Programm und prominenten Gästen in einer Komplett-Neufassung aktualisiert werden.
+                </p>
+            </div>
+            
+            <div class="section-card">
+                <h2 class="text-2xl font-bold mb-2" style="color: var(--text-primary);">Bochumer Musiksommer</h2>
+                <p class="text-sm mb-3" style="color: var(--text-secondary);">Sichtbarkeit: 0,01% | Keyword: <span class="font-semibold">musiksommer bochum programm</span></p>
+                <a href="https://www.waz.de/lokales/bochum/article407126015/musiksommer-2024-was-bochumer-nicht-verpassen-sollten.html" target="_blank" class="text-accent-primary hover:text-accent-primary-hover text-sm break-all">Link zur Quelle</a>
+                <hr class="my-4" style="border-color: var(--border-color);">
+                <h3 class="font-bold text-lg text-accent-primary mb-2">Begründung für Republish</h3>
+                <p style="color: var(--text-primary);">
+                    <span class="font-bold block mb-1">Update-Empfehlung: März/April</span>
+                    Extrem relevantes, jährliches Event. Artikel als Grundlage für eine Komplett-Neufassung für den nächsten Musiksommer verwenden.
+                </p>
+            </div>
+            
+            <div class="section-card">
+                <h2 class="text-2xl font-bold mb-2" style="color: var(--text-primary);">Hub: Extraschicht</h2>
+                <p class="text-sm mb-3" style="color: var(--text-secondary);">Sichtbarkeit: bis 0,00% | Keywords: <span class="font-semibold">extraschicht vorverkauf, extra schicht tickets</span></p>
+                <a href="https://www.waz.de/lokales/bochum/article406400365/extraschicht-2024-was-man-inbochum--nicht-verpassen-sollte.html" target="_blank" class="text-accent-primary hover:text-accent-primary-hover text-sm break-all">Link zur Hauptquelle (Übersicht)</a>
+                
+                <button data-toggle-button aria-expanded="false" aria-controls="extraschicht-links" class="mt-3 text-accent-primary hover:text-accent-primary-hover text-sm font-semibold flex items-center gap-1 border-none bg-transparent p-0 cursor-pointer focus:outline-none focus:ring-0">
+                    <span class="underline">Quellen anzeigen</span>
+                    <svg data-toggle-icon class="w-4 h-4 text-accent-primary transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </button>
+                <div id="extraschicht-links" class="hidden max-h-0 overflow-hidden transition-all duration-300 mt-3 space-y-2 p-3 rounded-md" style="background-color: var(--bg-interactive); border: 1px solid var(--border-color);">
+                    <p class="font-bold text-sm mb-1" style="color: var(--text-primary);">Unterartikel:</p>
+                    <a href="https://www.waz.de/lokales/bochum/article409090760/comeback-bei-extraschicht-ein-bochumer-spielort-ist-zurueck.html" target="_blank" class="block text-sm text-accent-primary hover:text-accent-primary-hover break-all">Comeback eines Spielorts (0,00%)</a>
+                </div>
+
+                <hr class="my-4" style="border-color: var(--border-color);">
+                <h3 class="font-bold text-lg text-accent-primary mb-2">Begründung für Hub-Artikel</h3>
+                <p style="color: var(--text-primary);">
+                    <span class="font-bold block mb-1">Update-Empfehlung: März/April</span>
+                    Jährliches Großevent. Ein umfassender Hub als Komplett-Neufassung mit dem neuen Programm für alle Bochumer Spielorte ist ein Muss.
+                </p>
+            </div>
+
+            <!-- ======================= MAI ======================= -->
+            <div id="mai" class="month-header">
+                <h2 class="text-3xl font-extrabold" style="color: var(--text-primary);">Mai</h2>
+            </div>
+            
+            <div class="section-card">
+                <h2 class="text-2xl font-bold mb-2" style="color: var(--text-primary);">Hub: Erdbeer-Saison</h2>
+                <p class="text-sm mb-3" style="color: var(--text-secondary);">Sichtbarkeit: bis 0,15% | Keywords: <span class="font-semibold">erdbeeren pflücken bochum, erdbeeren bochum</span></p>
+                <a href="https://www.waz.de/lokales/bochum/article404485711/erdbeeren-selbst-pfluecken-in-bochum-diese-anbieter-gibt-es.html" target="_blank" class="text-accent-primary hover:text-accent-primary-hover text-sm break-all">Link zur Hauptquelle (Selbstpflücken)</a>
+                
+                <button data-toggle-button aria-expanded="false" aria-controls="erdbeer-links" class="mt-3 text-accent-primary hover:text-accent-primary-hover text-sm font-semibold flex items-center gap-1 border-none bg-transparent p-0 cursor-pointer focus:outline-none focus:ring-0">
+                    <span class="underline">Quellen anzeigen</span>
+                    <svg data-toggle-icon class="w-4 h-4 text-accent-primary transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </button>
+                <div id="erdbeer-links" class="hidden max-h-0 overflow-hidden transition-all duration-300 mt-3 space-y-2 p-3 rounded-md" style="background-color: var(--bg-interactive); border: 1px solid var(--border-color);">
+                    <p class="font-bold text-sm mb-1" style="color: var(--text-primary);">Unterartikel:</p>
+                    <a href="https://www.waz.de/lokales/bochum/article408804410/frueher-als-sonst-hier-gibtE28098s-in-bochum-lokale-erdbeeren.html" target="_blank" class="block text-sm text-accent-primary hover:text-accent-primary-hover break-all">Wo es lokale Erdbeeren gibt (0,00%)</a>
+                </div>
+
+                <hr class="my-4" style="border-color: var(--border-color);">
+                <h3 class="font-bold text-lg text-accent-primary mb-2">Begründung für Hub-Artikel</h3>
+                <p style="color: var(--text-primary);">
+                    <span class="font-bold block mb-1">Update-Empfehlung: April</span>
+                    Saisonaler Service-Ratgeber. Eine frühzeitige Recherche bei den Höfen zu Startterminen und Preisen für eine umfassende Übersicht ist nötig.
+                </p>
+            </div>
+
+            <div class="section-card">
+                <h2 class="text-2xl font-bold mb-2" style="color: var(--text-primary);">Hub: Streetfood-Märkte</h2>
+                <p class="text-sm mb-3" style="color: var(--text-secondary);">Sichtbarkeit: bis 0,03% | Keywords: <span class="font-semibold">brauhof bochum, food messe bochum</span></p>
+                <a href="https://www.waz.de/lokales/bochum/article408913671/streetfood-markt-in-bochum-die-schoensten-18-bilder.html" target="_blank" class="text-accent-primary hover:text-accent-primary-hover text-sm break-all">Link zur Hauptquelle</a>
+                
+                <button data-toggle-button aria-expanded="false" aria-controls="streetfood-links" class="mt-3 text-accent-primary hover:text-accent-primary-hover text-sm font-semibold flex items-center gap-1 border-none bg-transparent p-0 cursor-pointer focus:outline-none focus:ring-0">
+                    <span class="underline">Quellen anzeigen</span>
+                    <svg data-toggle-icon class="w-4 h-4 text-accent-primary transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </button>
+                <div id="streetfood-links" class="hidden max-h-0 overflow-hidden transition-all duration-300 mt-3 space-y-2 p-3 rounded-md" style="background-color: var(--bg-interactive); border: 1px solid var(--border-color);">
+                    <p class="font-bold text-sm mb-1" style="color: var(--text-primary);">Unterartikel:</p>
+                    <a href="https://www.waz.de/lokales/bochum/article408874212/food-lovers-beliebter-streetfood-markt-wieder-in-bochum.html" target="_blank" class="block text-sm text-accent-primary hover:text-accent-primary-hover break-all">Food-Lovers Markt (0,02%)</a>
+                </div>
+
+                <hr class="my-4" style="border-color: var(--border-color);">
+                <h3 class="font-bold text-lg text-accent-primary mb-2">Begründung für Hub-Artikel</h3>
+                <p style="color: var(--text-primary);">
+                    <span class="font-bold block mb-1">Update-Empfehlung: Laufend</span>
+                    Wiederkehrende Events. Ein Hub mit neuen Terminen für alle Streetfood-Märkte bündelt das Interesse.
+                </p>
+            </div>
+
+            <div class="section-card">
+                <h2 class="text-2xl font-bold mb-2" style="color: var(--text-primary);">Bochum Total</h2>
+                <p class="text-sm mb-3" style="color: var(--text-secondary);">Sichtbarkeit: 0,01% | Keyword: <span class="font-semibold">bochum total headliner</span></p>
+                <a href="https://www.waz.de/lokales/bochum/article406655602/bochum-total-2024-programm-line-up-buehnen-ueberblick.html" target="_blank" class="text-accent-primary hover:text-accent-primary-hover text-sm break-all">Link zur Quelle</a>
+                <hr class="my-4" style="border-color: var(--border-color);">
+                <h3 class="font-bold text-lg text-accent-primary mb-2">Begründung für Republish</h3>
+                <p style="color: var(--text-primary);">
+                    <span class="font-bold block mb-1">Update-Empfehlung: April/Mai</span>
+                    Eines der wichtigsten Events. Muss als Komplett-Neufassung kontinuierlich mit neuem Line-Up, Bühnenplan etc. aktualisiert werden.
+                </p>
+            </div>
+            
+            <div class="section-card">
+                <h2 class="text-2xl font-bold mb-2" style="color: var(--text-primary);">Badestelle an der Ruhr</h2>
+                <p class="text-sm mb-3" style="color: var(--text-secondary);">Sichtbarkeit: 0,10% | Keyword: <span class="font-semibold">baden in der ruhr</span></p>
+                <a href="https://www.waz.de/lokales/bochum/article401525831/badestelle-an-der-ruhr-eroeffnet-was-besucher-wissen-muessen.html" target="_blank" class="text-accent-primary hover:text-accent-primary-hover text-sm break-all">Link zur Quelle</a>
+                <hr class="my-4" style="border-color: var(--border-color);">
+                <h3 class="font-bold text-lg text-accent-primary mb-2">Begründung für Republish</h3>
+                <p style="color: var(--text-primary);">
+                    <span class="font-bold block mb-1">Update-Empfehlung: April</span>
+                    Vor jeder Badesaison mit aktuellen Regeln, Wasserqualität und Öffnungszeiten die Daten updaten.
+                </p>
+            </div>
+
+            <div class="section-card">
+                <h2 class="text-2xl font-bold mb-2" style="color: var(--text-primary);">Sommerferien-Tipps</h2>
+                <p class="text-sm mb-3" style="color: var(--text-secondary);">Sichtbarkeit: 0,01% | Keyword: <span class="font-semibold">ferienprogramm bochum 2018</span></p>
+                <a href="https://www.waz.de/lokales/bochum/article409027383/im-sommer-ohne-betreuung-vier-tipps-fuer-eltern-in-bochum.html" target="_blank" class="text-accent-primary hover:text-accent-primary-hover text-sm break-all">Link zur Quelle</a>
+                <hr class="my-4" style="border-color: var(--border-color);">
+                <h3 class="font-bold text-lg text-accent-primary mb-2">Begründung für Republish</h3>
+                <p style="color: var(--text-primary);">
+                    <span class="font-bold block mb-1">Update-Empfehlung: April/Mai</span>
+                    Jährlich relevanter Service-Ratgeber für Familien. In einer Komplett-Neufassung mit neuen Angeboten aktualisieren.
+                </p>
+            </div>
+
+            <div class="section-card">
+                <h2 class="text-2xl font-bold mb-2" style="color: var(--text-primary);">Fiege Kino</h2>
+                <p class="text-sm mb-3" style="color: var(--text-secondary);">Sichtbarkeit: 0,01% | Keyword: <span class="font-semibold">fiege kino</span></p>
+                <a href="https://www.waz.de/lokales/bochum/article406790657/fiege-kino-in-bochum-angelaufen-die-filmabende-im-waz-check.html" target="_blank" class="text-accent-primary hover:text-accent-primary-hover text-sm break-all">Link zur Quelle</a>
+                <hr class="my-4" style="border-color: var(--border-color);">
+                <h3 class="font-bold text-lg text-accent-primary mb-2">Begründung für Republish</h3>
+                <p style="color: var(--text-primary);">
+                    <span class="font-bold block mb-1">Update-Empfehlung: April/Mai</span>
+                    Wiederkehrendes Sommerthema. Jedes Jahr in einer Komplett-Neufassung mit dem neuen Programm, Preisen und Terminen aktualisieren.
+                </p>
+            </div>
+
+            <!-- ======================= JUNI ======================= -->
+            <div id="juni" class="month-header">
+                <h2 class="text-3xl font-extrabold" style="color: var(--text-primary);">Juni</h2>
+            </div>
+
+            <div class="section-card">
+                <h2 class="text-2xl font-bold mb-2" style="color: var(--text-primary);">Zeltfestival Ruhr</h2>
+                <p class="text-sm mb-3" style="color: var(--text-secondary);">Sichtbarkeit: 0,17% | Keyword: <span class="font-semibold">zeltfestival ruhr</span></p>
+                <a href="https://www.waz.de/lokales/bochum/article407156755/zeltfestival-ruhr-2025-termin-und-erste-kuenstler-bestaetigt.html" target="_blank" class="text-accent-primary hover:text-accent-primary-hover text-sm break-all">Link zur Quelle</a>
+                <hr class="my-4" style="border-color: var(--border-color);">
+                <h3 class="font-bold text-lg text-accent-primary mb-2">Begründung für Republish</h3>
+                <p style="color: var(--text-primary);">
+                    <span class="font-bold block mb-1">Update-Empfehlung: Sobald erste Künstler bekannt sind</span>
+                    Wichtiges saisonales Event mit hoher Priorität. Muss jährlich mit dem neuen Line-Up aktualisiert werden, um das Ranking zu verbessern.
+                </p>
+            </div>
+            
+            <div class="section-card">
+                <h2 class="text-2xl font-bold mb-2" style="color: var(--text-primary);">Einschulung: Sparen bei Tornistern</h2>
+                <p class="text-sm mb-3" style="color: var(--text-secondary);">Sichtbarkeit: 0,05% | Keyword: <span class="font-semibold">kleine raupe bochum</span></p>
+                <a href="https://www.waz.de/lokales/bochum/article406656292/einschulung-in-bochum-so-spart-man-bei-tornistern-und-co.html" target="_blank" class="text-accent-primary hover:text-accent-primary-hover text-sm break-all">Link zur Quelle</a>
+                <hr class="my-4" style="border-color: var(--border-color);">
+                <h3 class="font-bold text-lg text-accent-primary mb-2">Begründung für Republish</h3>
+                <p style="color: var(--text-primary);">
+                    <span class="font-bold block mb-1">Update-Empfehlung: April/Mai</span>
+                    Wichtiger saisonaler Ratgeber für Eltern. Muss jährlich vor der Einschulung mit aktuellen Spartipps und Händler-Aktionen aktualisiert werden.
+                </p>
+            </div>
+
+            <!-- ======================= JULI ======================= -->
+            <div id="juli" class="month-header">
+                <h2 class="text-3xl font-extrabold" style="color: var(--text-primary);">Juli</h2>
+            </div>
+            
+            <div class="section-card">
+                <h2 class="text-2xl font-bold mb-2" style="color: var(--text-primary);">Hub: Kirmes & Stadtfeste</h2>
+                <p class="text-sm mb-3" style="color: var(--text-secondary);">Sichtbarkeit: bis 0,07% | Keywords: <span class="font-semibold">harpener dorffest, fliegenkirmes bochum</span></p>
+                <a href="https://www.waz.de/lokales/bochum/article406944768/harpener-dorffest-2024-die-wichtigsten-fragen-und-antworten.html" target="_blank" class="text-accent-primary hover:text-accent-primary-hover text-sm break-all">Link zur Hauptquelle</a>
+                
+                <button data-toggle-button aria-expanded="false" aria-controls="kirmes-stadtfeste-links" class="mt-3 text-accent-primary hover:text-accent-primary-hover text-sm font-semibold flex items-center gap-1 border-none bg-transparent p-0 cursor-pointer focus:outline-none focus:ring-0">
+                    <span class="underline">Quellen anzeigen</span>
+                    <svg data-toggle-icon class="w-4 h-4 text-accent-primary transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </button>
+                <div id="kirmes-stadtfeste-links" class="hidden max-h-0 overflow-hidden transition-all duration-300 mt-3 space-y-2 p-3 rounded-md" style="background-color: var(--bg-interactive); border: 1px solid var(--border-color);">
+                    <p class="font-bold text-sm mb-1" style="color: var(--text-primary);">Unterartikel:</p>
+                    <a href="https://www.waz.de/lokales/bochum/article406944768/harpener-dorffest-2024-die-wichtigsten-fragen-und-antworten.html" target="_blank" class="block text-sm text-accent-primary hover:text-accent-primary-hover break-all">Harpener Dorffest (0,07%)</a>
+                    <a href="https://www.waz.de/lokales/bochum/article408511332/weine-vor-freude-bochumer-wein-festival-wird-noch-groesser.html" target="_blank" class="block text-sm text-accent-primary hover:text-accent-primary-hover break-all">Bochumer Wein-Festival (0,04%)</a>
+                </div>
+
+                <hr class="my-4" style="border-color: var(--border-color);">
+                <h3 class="font-bold text-lg text-accent-primary mb-2">Begründung für Hub-Artikel</h3>
+                <p style="color: var(--text-primary);">
+                    <span class="font-bold block mb-1">Update-Empfehlung: Laufend</span>
+                    Ein Hub für lokale Kirmes-Termine und Stadtfeste bietet ganzjährig hohen Service-Wert und bündelt die Autorität für Event-Themen.
+                </p>
+            </div>
+
+            <div class="section-card">
+                <h2 class="text-2xl font-bold mb-2" style="color: var(--text-primary);">Streuobstwiesen</h2>
+                <p class="text-sm mb-3" style="color: var(--text-secondary);">Sichtbarkeit: 0,00% | Keyword: <span class="font-semibold">streuobstwiesen bochum</span></p>
+                <a href="https://www.waz.de/lokales/bochum/article401965203/bochum-oeffnet-17-streuobstwiesen-ungespritzt-und-kostenlos.html" target="_blank" class="text-accent-primary hover:text-accent-primary-hover text-sm break-all">Link zur Quelle</a>
+                <hr class="my-4" style="border-color: var(--border-color);">
+                <h3 class="font-bold text-lg text-accent-primary mb-2">Begründung für Republish</h3>
+                <p style="color: var(--text-primary);">
+                    <span class="font-bold block mb-1">Update-Empfehlung: Juni</span>
+                    Hat saisonalen Service-Charakter. Jährlich prüfen, ob die Liste der Wiesen noch aktuell ist und wann die Erntezeit beginnt.
+                </p>
+            </div>
+
+            <!-- ======================= AUGUST ======================= -->
+            <div id="august" class="month-header">
+                <h2 class="text-3xl font-extrabold" style="color: var(--text-primary);">August</h2>
+            </div>
+            
+            <div class="section-card">
+                <h2 class="text-2xl font-bold mb-2" style="color: var(--text-primary);">i-Dötzchen Fotos</h2>
+                <p class="text-sm mb-3" style="color: var(--text-secondary);">Sichtbarkeit: 0,06% | Keyword: <span class="font-semibold">angold behrendt</span></p>
+                <a href="https://www.waz.de/lokales/bochum/article407078524/i-doetzchen-2024-inbochum--die-fotos-der-grundschulen.html" target="_blank" class="text-accent-primary hover:text-accent-primary-hover text-sm break-all">Link zur Quelle</a>
+                <hr class="my-4" style="border-color: var(--border-color);">
+                <h3 class="font-bold text-lg text-accent-primary mb-2">Begründung für Republish</h3>
+                <p style="color: var(--text-primary);">
+                    <span class="font-bold block mb-1">Update-Empfehlung: Juli/August</span>
+                    Jährliches Format mit extrem hoher lokaler Relevanz. Prozess für die Foto-Bestellung und Veröffentlichung optimieren, um die UX zu steigern.
+                </p>
+            </div>
+
+            <div class="section-card">
+                <h2 class="text-2xl font-bold mb-2" style="color: var(--text-primary);">Herbst-Freizeittipps</h2>
+                <p class="text-sm mb-3" style="color: var(--text-secondary);">Sichtbarkeit: 0,00% | Keyword: <span class="font-semibold">minigolf bochum weitmarer holz</span></p>
+                <a href="https://www.waz.de/lokales/bochum/article407284815/den-herbst-in-bochum-geniessen-acht-freizeit-tipps.html" target="_blank" class="text-accent-primary hover:text-accent-primary-hover text-sm break-all">Link zur Quelle</a>
+                <hr class="my-4" style="border-color: var(--border-color);">
+                <h3 class="font-bold text-lg text-accent-primary mb-2">Begründung für Republish</h3>
+                <p style="color: var(--text-primary);">
+                    <span class="font-bold block mb-1">Update-Empfehlung: Juli</span>
+                    Klassische saisonale Liste mit Tipps, die jedes Jahr in einer Komplett-Neufassung neu aufbereitet werden kann.
+                </p>
+            </div>
+
+            <div class="section-card">
+                <h2 class="text-2xl font-bold mb-2" style="color: var(--text-primary);">Hundeschwimmen im Freibad</h2>
+                <p class="text-sm mb-3" style="color: var(--text-secondary);">Sichtbarkeit: 0,00% | Keyword: <span class="font-semibold">hundeschwimmen dortmund</span></p>
+                <a href="https://www.waz.de/lokales/bochum/article407324104/warum-ein-bochumer-freibad-bei-hunden-so-beliebt-ist.html" target="_blank" class="text-accent-primary hover:text-accent-primary-hover text-sm break-all">Link zur Quelle</a>
+                <hr class="my-4" style="border-color: var(--border-color);">
+                <h3 class="font-bold text-lg text-accent-primary mb-2">Begründung für Republish</h3>
+                <p style="color: var(--text-primary);">
+                    <span class="font-bold block mb-1">Update-Empfehlung: Juli</span>
+                    Klassisches Saisonthema, das jährlich mit neuen Terminen der teilnehmenden Bäder aktualisiert werden kann, um das Ranking zu verbessern.
+                </p>
+            </div>
+            
+            <div class="section-card">
+                <h2 class="text-2xl font-bold mb-2" style="color: var(--text-primary);">Hub: Weitere Kirmes-Termine</h2>
+                 <p class="text-sm mb-3" style="color: var(--text-secondary);">Sichtbarkeit: bis 0,04% | Keywords: <span class="font-semibold">bochum stiepel kirmes, herbstkirmes wattenscheid</span></p>
+                <a href="https://www.waz.de/lokales/bochum/article407177858/fliegenkirmes-in-bochum--stiepel-was-dieses-jahr-neu-ist.html" target="_blank" class="text-accent-primary hover:text-accent-primary-hover text-sm break-all">Link zur Hauptquelle</a>
+                
+                <button data-toggle-button aria-expanded="false" aria-controls="weitere-kirmes-links" class="mt-3 text-accent-primary hover:text-accent-primary-hover text-sm font-semibold flex items-center gap-1 border-none bg-transparent p-0 cursor-pointer focus:outline-none focus:ring-0">
+                    <span class="underline">Quellen anzeigen</span>
+                    <svg data-toggle-icon class="w-4 h-4 text-accent-primary transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </button>
+                <div id="weitere-kirmes-links" class="hidden max-h-0 overflow-hidden transition-all duration-300 mt-3 space-y-2 p-3 rounded-md" style="background-color: var(--bg-interactive); border: 1px solid var(--border-color);">
+                    <p class="font-bold text-sm mb-1" style="color: var(--text-primary);">Unterartikel:</p>
+                    <a href="https://www.waz.de/lokales/bochum/article407177858/fliegenkirmes-in-bochum--stiepel-was-dieses-jahr-neu-ist.html" target="_blank" class="block text-sm text-accent-primary hover:text-accent-primary-hover break-all">Fliegenkirmes Stiepel (0,04%)</a>
+                    <a href="https://www.waz.de/lokales/bochum/article409031381/kirmes-umzug-in-bochum--steht-ploetzlich-auf-der-kippe.html" target="_blank" class="block text-sm text-accent-primary hover:text-accent-primary-hover break-all">Herbstkirmes Wattenscheid (0,03%)</a>
+                </div>
+
+                <hr class="my-4" style="border-color: var(--border-color);">
+                <h3 class="font-bold text-lg text-accent-primary mb-2">Begründung für Hub-Artikel</h3>
+                <p style="color: var(--text-primary);">
+                    <span class="font-bold block mb-1">Update-Empfehlung: Laufend</span>
+                    Ein Hub für lokale Kirmes-Termine bietet ganzjährig hohen Service-Wert. Diese Termine ergänzen die Hauptsaison.
+                </p>
+            </div>
+
+            <!-- ======================= SEPTEMBER ======================= -->
+            <div id="september" class="month-header">
+                <h2 class="text-3xl font-extrabold" style="color: var(--text-primary);">September</h2>
+            </div>
+            <div class="section-card">
+                <h2 class="text-2xl font-bold mb-2" style="color: var(--text-primary);">Semesterstart</h2>
+                <p class="text-sm mb-3" style="color: var(--text-secondary);">Sichtbarkeit: 0,01% | Keyword: <span class="font-semibold">hochschule bochum semesterbeginn</span></p>
+                <a href="https://www.waz.de/lokales/bochum/article407392671/semesterstart.html" target="_blank" class="text-accent-primary hover:text-accent-primary-hover text-sm break-all">Link zur Quelle</a>
+                <hr class="my-4" style="border-color: var(--border-color);">
+                <h3 class="font-bold text-lg text-accent-primary mb-2">Begründung für Republish</h3>
+                <p style="color: var(--text-primary);">
+                    <span class="font-bold block mb-1">Update-Empfehlung: Juli/August & Jan/Feb</span>
+                    Zweimal jährlich hochrelevantes Thema. Zu einem Service-Stück mit allen wichtigen Daten für Unis/HS ausbauen, um das Ranking zu verbessern.
+                </p>
+            </div>
+
+            <!-- ======================= OKTOBER ======================= -->
+            <div id="oktober" class="month-header">
+                <h2 class="text-3xl font-extrabold" style="color: var(--text-primary);">Oktober</h2>
+            </div>
+            <div class="section-card">
+                <h2 class="text-2xl font-bold mb-2" style="color: var(--text-primary);">Hub: Halloween in Bochum</h2>
+                <p class="text-sm mb-3" style="color: var(--text-secondary);">Sichtbarkeit: bis 0,21% | Keywords: <span class="font-semibold">halloween party bochum, gruselhaus</span></p>
+                <a href="https://www.waz.de/lokales/bochum/article407373876/halloween-partys-in-bochum-hier-gibt-es-2024-gruselspass.html" target="_blank" class="text-accent-primary hover:text-accent-primary-hover text-sm break-all">Link zur Hauptquelle (Partys)</a>
+                
+                <button data-toggle-button aria-expanded="false" aria-controls="halloween-links" class="mt-3 text-accent-primary hover:text-accent-primary-hover text-sm font-semibold flex items-center gap-1 border-none bg-transparent p-0 cursor-pointer focus:outline-none focus:ring-0">
+                    <span class="underline">Quellen anzeigen</span>
+                    <svg data-toggle-icon class="w-4 h-4 text-accent-primary transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </button>
+                <div id="halloween-links" class="hidden max-h-0 overflow-hidden transition-all duration-300 mt-3 space-y-2 p-3 rounded-md" style="background-color: var(--bg-interactive); border: 1px solid var(--border-color);">
+                    <p class="font-bold text-sm mb-1" style="color: var(--text-primary);">Unterartikel:</p>
+                    <a href="https://www.waz.de/lokales/bochum/article407528438/halloween-an-diesem-bochumer-haus-wirdE28098s-besonders--schaurig.html" target="_blank" class="block text-sm text-accent-primary hover:text-accent-primary-hover break-all">Halloween-Gruselhaus (0,03%)</a>
+                </div>
+
+                <hr class="my-4" style="border-color: var(--border-color);">
+                <h3 class="font-bold text-lg text-accent-primary mb-2">Begründung für Hub-Artikel</h3>
+                <p style="color: var(--text-primary);">
+                    <span class="font-bold block mb-1">Update-Empfehlung: August/September</span>
+                    Starkes Saisonthema. Ein Hub, der Partys, Events und Gruselhäuser als Komplett-Neufassung bündelt, ist ideal.
+                </p>
+            </div>
+            
+            <div class="section-card">
+                <h2 class="text-2xl font-bold mb-2" style="color: var(--text-primary);">Hub: St. Martin Umzüge</h2>
+                <p class="text-sm mb-3" style="color: var(--text-secondary);">Sichtbarkeit: 0,16% | Keywords: <span class="font-semibold">martinsmarkt bochum</span></p>
+                <a href="https://www.waz.de/lokales/bochum/article407403165/st-martin-in-bochum-hier-gibt-es-2024-laternenumzuege.html" target="_blank" class="text-accent-primary hover:text-accent-primary-hover text-sm break-all">Link zur Hauptquelle (Übersicht)</a>
+                
+                <button data-toggle-button aria-expanded="false" aria-controls="martin-links" class="mt-3 text-accent-primary hover:text-accent-primary-hover text-sm font-semibold flex items-center gap-1 border-none bg-transparent p-0 cursor-pointer focus:outline-none focus:ring-0">
+                    <span class="underline">Quellen anzeigen</span>
+                    <svg data-toggle-icon class="w-4 h-4 text-accent-primary transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </button>
+                <div id="martin-links" class="hidden max-h-0 overflow-hidden transition-all duration-300 mt-3 space-y-2 p-3 rounded-md" style="background-color: var(--bg-interactive); border: 1px solid var(--border-color);">
+                    <p class="font-bold text-sm mb-1" style="color: var(--text-primary);">Unterartikel:</p>
+                    <a href="https://www.waz.de/lokales/bochum/article401959900/trotz-corona-st-martin-zieht-durch-linden-alle-fotos.html" target="_blank" class="block text-sm text-accent-primary hover:text-accent-primary-hover break-all">St. Martin in Linden (0,01%)</a>
+                </div>
+
+                <hr class="my-4" style="border-color: var(--border-color);">
+                <h3 class="font-bold text-lg text-accent-primary mb-2">Begründung für Hub-Artikel</h3>
+                <p style="color: var(--text-primary);">
+                    <span class="font-bold block mb-1">Update-Empfehlung: September</span>
+                    Wichtiger Service-Artikel für Familien. Eine umfassende Liste mit Terminen aller Martinszüge muss frühzeitig recherchiert werden.
+                </p>
+            </div>
+            
+            <div class="section-card">
+                <h2 class="text-2xl font-bold mb-2" style="color: var(--text-primary);">Black Friday im Ruhrpark</h2>
+                <p class="text-sm mb-3" style="color: var(--text-secondary);">Sichtbarkeit: 0,03% | Keyword: <span class="font-semibold">ruhrpark bochum black friday</span></p>
+                <a href="https://www.waz.de/lokales/bochum/article407792843/black-friday-in-bochum-ruhrpark-platzt-aus-allen-naehten.html" target="_blank" class="text-accent-primary hover:text-accent-primary-hover text-sm break-all">Link zur Quelle</a>
+                <hr class="my-4" style="border-color: var(--border-color);">
+                <h3 class="font-bold text-lg text-accent-primary mb-2">Begründung für Republish</h3>
+                <p style="color: var(--text-primary);">
+                    <span class="font-bold block mb-1">Update-Empfehlung: Oktober</span>
+                    Jedes Jahr vor dem Black Friday in einer Komplett-Neufassung mit den geplanten Aktionen und Angeboten im Ruhr Park und der Innenstadt aktualisieren.
+                </p>
+            </div>
+
+            <!-- ======================= NOVEMBER ======================= -->
+            <div id="november" class="month-header">
+                <h2 class="text-3xl font-extrabold" style="color: var(--text-primary);">November</h2>
+            </div>
+            <div class="section-card">
+                <h2 class="text-2xl font-bold mb-2" style="color: var(--text-primary);">Hub: Eislaufen in Bochum</h2>
+                <p class="text-sm mb-3" style="color: var(--text-secondary);">Sichtbarkeit: bis 0,44% | Keywords: <span class="font-semibold">eislaufen bochum, jahrhunderthalle bochum eislaufen</span></p>
+                <a href="https://www.waz.de/lokales/bochum/article407881473/der-eissalon-ruhr-inbochum--oeffnet-termine-und-preise.html" target="_blank" class="text-accent-primary hover:text-accent-primary-hover text-sm break-all">Link zur Hauptquelle (Eissalon)</a>
+                
+                <button data-toggle-button aria-expanded="false" aria-controls="eislaufen-links" class="mt-3 text-accent-primary hover:text-accent-primary-hover text-sm font-semibold flex items-center gap-1 border-none bg-transparent p-0 cursor-pointer focus:outline-none focus:ring-0">
+                    <span class="underline">Quellen anzeigen</span>
+                    <svg data-toggle-icon class="w-4 h-4 text-accent-primary transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </button>
+                <div id="eislaufen-links" class="hidden max-h-0 overflow-hidden transition-all duration-300 mt-3 space-y-2 p-3 rounded-md" style="background-color: var(--bg-interactive); border: 1px solid var(--border-color);">
+                    <p class="font-bold text-sm mb-1" style="color: var(--text-primary);">Unterartikel:</p>
+                    <a href="https://www.waz.de/lokales/bochum/article407899918/preise-eisflaeche-gastro-eissalon-ruhr-in-bochum-im-check.html" target="_blank" class="block text-sm text-accent-primary hover:text-accent-primary-hover break-all">Eissalon Ruhr im Check (0,04%)</a>
+                </div>
+                
+                <hr class="my-4" style="border-color: var(--border-color);">
+                <h3 class="font-bold text-lg text-accent-primary mb-2">Begründung für Hub-Artikel</h3>
+                <p style="color: var(--text-primary);">
+                    <span class="font-bold block mb-1">Update-Empfehlung: September/Oktober</span>
+                    Beliebte Winteraktivität. Ein zentraler Service-Artikel mit Öffnungszeiten und Preisen ist ein Muss.
+                </p>
+            </div>
+            
+            <div class="section-card">
+                <h2 class="text-2xl font-bold mb-2" style="color: var(--text-primary);">Hub: Verkaufsoffene Sonntage</h2>
+                <p class="text-sm mb-3" style="color: var(--text-secondary);">Sichtbarkeit: bis 0,22% | Keywords: <span class="font-semibold">verkaufsoffener sonntag bochum</span></p>
+                <a href="https://www.waz.de/lokales/bochum/article408582646/verkaufsoffener-sonntag-das-ist-in-bochum-2025-geplant.html" target="_blank" class="text-accent-primary hover:text-accent-primary-hover text-sm break-all">Link zur Hauptquelle</a>
+                <hr class="my-4" style="border-color: var(--border-color);">
+                <h3 class="font-bold text-lg text-accent-primary mb-2">Begründung für Hub-Artikel</h3>
+                <p style="color: var(--text-primary);">
+                    <span class="font-bold block mb-1">Update-Empfehlung: Oktober</span>
+                    Ganzjährig relevanter Service-Artikel. Die Termine für das kommende Jahr sollten frühzeitig angefragt und als zentrale Übersicht veröffentlicht werden.
+                </p>
+            </div>
+            
+            <div class="section-card">
+                <h2 class="text-2xl font-bold mb-2" style="color: var(--text-primary);">Hub: Weihnachtsmärkte & Weihnachtszeit</h2>
+                <p class="text-sm mb-3" style="color: var(--text-secondary);">Sichtbarkeit: bis 1,66% | Keywords: <span class="font-semibold">weihnachtsmarkt bochum, ruhrpark weihnachtsmarkt</span></p>
+                <a href="https://www.waz.de/lokales/bochum/article404205018/weihnachtsmarkt-bochum-start-programm-oeffnungszeiten.html" target="_blank" class="text-accent-primary hover:text-accent-primary-hover text-sm break-all">Link zur Hauptquelle (Innenstadt)</a>
+                
+                <button data-toggle-button aria-expanded="false" aria-controls="weihnachten-links" class="mt-3 text-accent-primary hover:text-accent-primary-hover text-sm font-semibold flex items-center gap-1 border-none bg-transparent p-0 cursor-pointer focus:outline-none focus:ring-0">
+                    <span class="underline">Quellen anzeigen</span>
+                    <svg data-toggle-icon class="w-4 h-4 text-accent-primary transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </button>
+                <div id="weihnachten-links" class="hidden max-h-0 overflow-hidden transition-all duration-300 mt-3 space-y-2 p-3 rounded-md" style="background-color: var(--bg-interactive); border: 1px solid var(--border-color);">
+                    <p class="font-bold text-sm mb-1" style="color: var(--text-primary);">Unterartikel:</p>
+                    <a href="https://www.waz.de/lokales/bochum/article407693053/ruhrpark-bochum-weihnachtsmarkt-startet-mit-einer-parade.html" target="_blank" class="block text-sm text-accent-primary hover:text-accent-primary-hover break-all">Ruhrpark Weihnachtsmarkt (0,09%)</a>
+                    <a href="https://www.waz.de/lokales/bochum/article407728418/live-im-video-der-fliegende-weihnachtsmann-ist-wieder-da.html" target="_blank" class="block text-sm text-accent-primary hover:text-accent-primary-hover break-all">Der fliegende Weihnachtsmann (0,05%)</a>
+                    <a href="https://www.waz.de/lokales/bochum/article407840603/weihnachtsbaum-verkauf-in-bochum--so-viel-kosten-die-tannen.html" target="_blank" class="block text-sm text-accent-primary hover:text-accent-primary-hover break-all">Weihnachtsbaum-Verkauf (0,06%)</a>
+                    <a href="https://www.waz.de/lokales/bochum/article407742807/den-weihnachtsbaum-selber-faellen-in-wattenscheid-moeglich.html" target="_blank" class="block text-sm text-accent-primary hover:text-accent-primary-hover break-all">Weihnachtsbaum selber fällen (0,03%)</a>
+                    <a href="https://www.waz.de/lokales/bochum/article407934928/broetchen-an-weihnachten.html" target="_blank" class="block text-sm text-accent-primary hover:text-accent-primary-hover break-all">Brötchen an Weihnachten (0,03%)</a>
+                </div>
+
+                <hr class="my-4" style="border-color: var(--border-color);">
+                <h3 class="font-bold text-lg text-accent-primary mb-2">Begründung für Hub-Artikel</h3>
+                <p style="color: var(--text-primary);">
+                    <span class="font-bold block mb-1">Update-Empfehlung: September/Oktober</span>
+                    Das wichtigste Saisonthema des Jahres. Ein umfassender Hub mit Terminen, Programm, Preisen für alle Märkte ist ein absolutes Muss.
+                </p>
+            </div>
+
+            <!-- ======================= DEZEMBER ======================= -->
+            <div id="dezember" class="month-header">
+                <h2 class="text-3xl font-extrabold" style="color: var(--text-primary);">Dezember</h2>
+            </div>
+            <div class="section-card">
+                <h2 class="text-2xl font-bold mb-2" style="color: var(--text-primary);">Hub: Silvester in Bochum</h2>
+                <p class="text-sm mb-3" style="color: var(--text-secondary);">Sichtbarkeit: bis 0,11% | Keywords: <span class="font-semibold">silvesterparty bochum, feuerwerk bochum</span></p>
+                <a href="https://www.waz.de/lokales/bochum/article407968292/silvester-bochum--hier-wird-ins-jahr-2025-reingefeiert.html" target="_blank" class="text-accent-primary hover:text-accent-primary-hover text-sm break-all">Link zur Hauptquelle (Partys)</a>
+                
+                <button data-toggle-button aria-expanded="false" aria-controls="silvester-links" class="mt-3 text-accent-primary hover:text-accent-primary-hover text-sm font-semibold flex items-center gap-1 border-none bg-transparent p-0 cursor-pointer focus:outline-none focus:ring-0">
+                    <span class="underline">Quellen anzeigen</span>
+                    <svg data-toggle-icon class="w-4 h-4 text-accent-primary transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </button>
+                <div id="silvester-links" class="hidden max-h-0 overflow-hidden transition-all duration-300 mt-3 space-y-2 p-3 rounded-md" style="background-color: var(--bg-interactive); border: 1px solid var(--border-color);">
+                    <p class="font-bold text-sm mb-1" style="color: var(--text-primary);">Unterartikel:</p>
+                    <a href="https://www.waz.de/lokales/bochum/article407877618/sperrzone-in-bochum-wo-feuerwerk-zu-silvester-verboten-ist.html" target="_blank" class="block text-sm text-accent-primary hover:text-accent-primary-hover break-all">Wo Feuerwerk verboten ist (0,00%)</a>
+                </div>
+
+                <hr class="my-4" style="border-color: var(--border-color);">
+                <h3 class="font-bold text-lg text-accent-primary mb-2">Begründung für Hub-Artikel</h3>
+                <p style="color: var(--text-primary);">
+                    <span class="font-bold block mb-1">Update-Empfehlung: Oktober/November</span>
+                    Hohes Suchvolumen zum Jahresende. Eine Liste mit Partys, Dinner-Angeboten und den Regeln zum Feuerwerk muss frühzeitig recherchiert werden.
+                </p>
+            </div>
+            
+            <div class="section-card">
+                <h2 class="text-2xl font-bold mb-2" style="color: var(--text-primary);">Neuer Fahrplan der Bogestra</h2>
+                <p class="text-sm mb-3" style="color: var(--text-secondary);">Sichtbarkeit: 0,13% | Keyword: <span class="font-semibold">bogestra fahrplan</span></p>
+                <a href="https://www.waz.de/lokales/bochum/article408001114/neuer-fahrplan-der-bogestra-was-sich-in-bochum-aendert.html" target="_blank" class="text-accent-primary hover:text-accent-primary-hover text-sm break-all">Link zur Quelle</a>
+                <hr class="my-4" style="border-color: var(--border-color);">
+                <h3 class="font-bold text-lg text-accent-primary mb-2">Begründung für Republish</h3>
+                <p style="color: var(--text-primary);">
+                    <span class="font-bold block mb-1">Update-Empfehlung: November</span>
+                    Die wichtigsten Änderungen zum jährlichen Fahrplanwechsel im Dezember übersichtlich darstellen, um das Ranking zu verbessern.
+                </p>
+            </div>
+            
+            <div class="section-card">
+                <h2 class="text-2xl font-bold mb-2" style="color: var(--text-primary);">Grundsteuersätze</h2>
+                <p class="text-sm mb-3" style="color: var(--text-secondary);">Sichtbarkeit: 0,02% | Keyword: <span class="font-semibold">hebesatz bochum</span></p>
+                <a href="https://www.waz.de/lokales/bochum/article407939101/beschlossen-diese-grundsteuersaetze-gelten-2025-fuer-bochum.html" target="_blank" class="text-accent-primary hover:text-accent-primary-hover text-sm break-all">Link zur Quelle</a>
+                <hr class="my-4" style="border-color: var(--border-color);">
+                <h3 class="font-bold text-lg text-accent-primary mb-2">Begründung für Republish</h3>
+                <p style="color: var(--text-primary);">
+                    <span class="font-bold block mb-1">Update-Empfehlung: November</span>
+                    Die neuen Hebesätze für das Folgejahr bei der Stadt anfragen und die Beispielrechnungen im Artikel aktualisieren.
+                </p>
+            </div>
+            
+            <!-- ======================= GANZJÄHRIG RELEVANT (EVERGREEN) ======================= -->
+            <div id="evergreen" class="month-header">
+                <h2 class="text-3xl font-extrabold" style="color: var(--text-primary);">Ganzjährig relevant (Evergreen)</h2>
+            </div>
+            
+             <div class="section-card">
+                <h2 class="text-2xl font-bold mb-2" style="color: var(--text-primary);">Hub: Flohmärkte & Trödel</h2>
+                <p class="text-sm mb-3" style="color: var(--text-secondary);">Sichtbarkeit: bis 8% | Keyword: <span class="font-semibold">flohmarkt bochum, flowmarkt rotunde</span></p>
+                <a href="https://www.waz.de/lokales/bochum/article404899975/troedelmaerkte-und-flohmarkt-inbochum--diese-regelmaessigen-termine--gibt-es.html" target="_blank" class="text-accent-primary hover:text-accent-primary-hover text-sm break-all">Link zur Hauptquelle</a>
+                
+                <button data-toggle-button aria-expanded="false" aria-controls="flohmarkt-links" class="mt-3 text-accent-primary hover:text-accent-primary-hover text-sm font-semibold flex items-center gap-1 border-none bg-transparent p-0 cursor-pointer focus:outline-none focus:ring-0">
+                    <span class="underline">Quellen anzeigen</span>
+                    <svg data-toggle-icon class="w-4 h-4 text-accent-primary transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </button>
+                <div id="flohmarkt-links" class="hidden max-h-0 overflow-hidden transition-all duration-300 mt-3 space-y-2 p-3 rounded-md" style="background-color: var(--bg-interactive); border: 1px solid var(--border-color);">
+                    <p class="font-bold text-sm mb-1" style="color: var(--text-primary);">Unterartikel:</p>
+                    <a href="https://www.waz.de/lokales/bochum/article408699708/besonderer-flohmarkt-krempelmarkt-kommt-in-die-rotunde.html" target="_blank" class="block text-sm text-accent-primary hover:text-accent-primary-hover break-all">Krempelmarkt Rotunde (8%)</a>
+                    <a href="https://www.waz.de/lokales/bochum/article406904683/flohmarkt-kumpeltreff-kehrt-mit-sommerfest-zurueck.html" target="_blank" class="block text-sm text-accent-primary hover:text-accent-primary-hover break-all">Flohmarkt Kumpeltreff (0,00%)</a>
+                </div>
+
+                <hr class="my-4" style="border-color: var(--border-color);">
+                <h3 class="font-bold text-lg text-accent-primary mb-2">Begründung für Hub-Artikel</h3>
+                <p style="color: var(--text-primary);">
+                    <span class="font-bold block mb-1">Update-Empfehlung: Laufend (Peak im Januar)</span>
+                    Perfekter Evergreen-Listen-Artikel. Flohmärkte sind ein ganzjähriges Thema mit hohem Service-Wert. Ein Hub, der alle wiederkehrenden Märkte bündelt, schafft Autorität.
+                </p>
+            </div>
+            
+            <div class="section-card">
+                <h2 class="text-2xl font-bold mb-2" style="color: var(--text-primary);">Ruhrpark: Neue Geschäfte</h2>
+                <p class="text-sm mb-3" style="color: var(--text-secondary);">Sichtbarkeit: 0,64% | Keyword: <span class="font-semibold">ruhr park</span></p>
+                <a href="https://www.waz.de/lokales/bochum/article408855915/ruhrpark-inbochum--diese-sieben-geschaefte-sind-neu.html" target="_blank" class="text-accent-primary hover:text-accent-primary-hover text-sm break-all">Link zur Quelle</a>
+                <hr class="my-4" style="border-color: var(--border-color);">
+                <h3 class="font-bold text-lg text-accent-primary mb-2">Begründung für Republish</h3>
+                <p style="color: var(--text-primary);">
+                    <span class="font-bold block mb-1">Update-Empfehlung: Laufend (Peak im Juni)</span>
+                    Guter Listen-Artikel, der regelmäßig auf neue Geschäfte geprüft werden kann. Passend zum Beginn des Sommers und neuen Kollektionen steigt das Interesse.
+                </p>
+            </div>
+            
+            <div class="section-card">
+                <h2 class="text-2xl font-bold mb-2" style="color: var(--text-primary);">Draußen frühstücken: 8 Café-Tipps</h2>
+                <p class="text-sm mb-3" style="color: var(--text-secondary);">Sichtbarkeit: 0,47% | Keyword: <span class="font-semibold">frühstück bochum</span></p>
+                <a href="https://www.waz.de/lokales/bochum/article408627535/draussen-fruehstuecken-in-bochum-acht-cafe-tipps-mit-terrasse.html" target="_blank" class="text-accent-primary hover:text-accent-primary-hover text-sm break-all">Link zur Quelle</a>
+                <hr class="my-4" style="border-color: var(--border-color);">
+                <h3 class="font-bold text-lg text-accent-primary mb-2">Begründung für Republish</h3>
+                <p style="color: var(--text-primary);">
+                    <span class="font-bold block mb-1">Update-Empfehlung: April</span>
+                    Klassischer Evergreen-Listen-Artikel mit hohem Potenzial. Idealer Zeitpunkt, um rechtzeitig zur Terrassen-Saison organische Sichtbarkeit aufzubauen.
+                </p>
+            </div>
+            
+             <div class="section-card">
+                <h2 class="text-2xl font-bold mb-2" style="color: var(--text-primary);">Indoor-Ausflugstipps bei Regen</h2>
+                <p class="text-sm mb-3" style="color: var(--text-secondary);">Sichtbarkeit: 0,37% | Keyword: <span class="font-semibold">indoor spielplatz bochum</span></p>
+                <a href="https://www.waz.de/lokales/bochum/article405111344/bochum-freizeit-ausflugstipps-regen-indoor-drinnen-schlechtes-wetter.html" target="_blank" class="text-accent-primary hover:text-accent-primary-hover text-sm break-all">Link zur Quelle</a>
+                <hr class="my-4" style="border-color: var(--border-color);">
+                <h3 class="font-bold text-lg text-accent-primary mb-2">Begründung für Republish</h3>
+                <p style="color: var(--text-primary);">
+                    <span class="font-bold block mb-1">Update-Empfehlung: September</span>
+                    Hochwertiger Evergreen-Artikel für Familien. Perfektes Timing, um zum Ende der Sommerferien und zum Beginn der Schlechtwetter-Saison zu ranken.
+                </p>
+            </div>
+            
+             <div class="section-card">
+                <h2 class="text-2xl font-bold mb-2" style="color: var(--text-primary);">Hub: Schul-Checks</h2>
+                <p class="text-sm mb-3" style="color: var(--text-secondary);">Sichtbarkeit: bis 0,32% | Keywords: <span class="font-semibold">annette von droste hülshoff bochum</span></p>
+                <a href="https://www.waz.de/lokales/bochum/article401478506/welches-gymnasium-in-bochum-bietet-was-der-schul-check.html" target="_blank" class="text-accent-primary hover:text-accent-primary-hover text-sm break-all">Link zur Hauptquelle</a>
+                <!-- Dropdown wäre hier möglich, wenn es mehrere Schul-Check-Artikel gäbe. Da nur einer verlinkt ist, ist es nicht nötig. -->
+                <hr class="my-4" style="border-color: var(--border-color);">
+                <h3 class="font-bold text-lg text-accent-primary mb-2">Begründung für Hub-Artikel</h3>
+                <p style="color: var(--text-primary);">
+                    <span class="font-bold block mb-1">Update-Empfehlung: Januar</span>
+                    Sehr hoher Service-Wert für Eltern. Jährliche Prüfung vor den Anmeldefristen ist entscheidend. Perfekt terminiert für die Informationsphase der Eltern.
+                </p>
+            </div>
+            
+            <div class="section-card">
+                <h2 class="text-2xl font-bold mb-2" style="color: var(--text-primary);">Tierpark Bochum: Alle Infos</h2>
+                <p class="text-sm mb-3" style="color: var(--text-secondary);">Sichtbarkeit: 0,25% | Keyword: <span class="font-semibold">tierpark bochum</span></p>
+                <a href="https://www.waz.de/lokales/bochum/article404165169/tierpark-bochum-alle-infos-zu-tickets-anreise-tieren.html" target="_blank" class="text-accent-primary hover:text-accent-primary-hover text-sm break-all">Link zur Quelle</a>
+                <hr class="my-4" style="border-color: var(--border-color);">
+                <h3 class="font-bold text-lg text-accent-primary mb-2">Begründung für Republish</h3>
+                <p style="color: var(--text-primary);">
+                    <span class="font-bold block mb-1">Update-Empfehlung: Mai</span>
+                    Fundamentaler Guide. Preise und Öffnungszeiten vor klassischen Ausflugstagen (Feiertage, Ferien) prüfen, um maximale Relevanz zu gewährleisten.
+                </p>
+            </div>
+
+        </div>
+
+        <footer class="mt-8 pt-4 text-center" style="color: var(--text-secondary); border-color: var(--border-color); border-top-width: 1px;">
+            <p>Saisonaler SEO Kalender | FUNKE Mediengruppe</p>
+        </footer>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const toggleButtons = document.querySelectorAll('[data-toggle-button]');
+
+            toggleButtons.forEach(button => {
+                const linkContainer = document.getElementById(button.getAttribute('aria-controls'));
+                const toggleIcon = button.querySelector('[data-toggle-icon]');
+
+                if (!linkContainer || !toggleIcon) return;
+
+                // Initial state
+                linkContainer.style.maxHeight = '0';
+
+                button.addEventListener('click', () => {
+                    const isExpanded = button.getAttribute('aria-expanded') === 'true';
+
+                    if (isExpanded) {
+                        // Collapse
+                        linkContainer.style.maxHeight = linkContainer.scrollHeight + 'px';
+                        requestAnimationFrame(() => {
+                            linkContainer.style.maxHeight = '0';
+                        });
+                        setTimeout(() => {
+                            linkContainer.classList.add('hidden');
+                        }, 300);
+                        button.setAttribute('aria-expanded', 'false');
+                        toggleIcon.style.transform = 'rotate(0deg)';
+                    } else {
+                        // Expand
+                        linkContainer.classList.remove('hidden');
+                        linkContainer.style.maxHeight = linkContainer.scrollHeight + 'px';
+                        button.setAttribute('aria-expanded', 'true');
+                        toggleIcon.style.transform = 'rotate(180deg)';
+                        
+                        linkContainer.addEventListener('transitionend', function handler() {
+                            if (button.getAttribute('aria-expanded') === 'true') {
+                                linkContainer.style.maxHeight = 'none';
+                            }
+                            linkContainer.removeEventListener('transitionend', handler);
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

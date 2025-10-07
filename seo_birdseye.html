@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evergreen SEO Hub-Struktur – Bochum</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FUNKE CI Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <!-- Panzoom Library for Zoom & Pan functionality -->
+    <script src="https://unpkg.com/@panzoom/panzoom@4.5.1/dist/panzoom.min.js"></script>
+    
+    <style>
+        /* =================================================================
+         * GRUNDLAGEN & THEME-DEFINITION (FUNKE CI)
+         * =================================================================
+         */
+        :root {
+            /* -- Basis-Farbpalette (FUNKE) -- */
+            --funke-red-base: #ED1C24;
+            --funke-red-hover-base: #C81219;
+            --funke-black: #1A1A1A;
+            --funke-dark-gray: #333333;
+            --funke-medium-gray: #6C757D;
+            --funke-light-gray: #E9ECEF;
+            --funke-off-white: #F8F9FA;
+            --funke-white: #FFFFFF;
+
+            /* -- Semantische Farbvariablen -- */
+            --bg-primary: var(--funke-off-white);
+            --bg-card: var(--funke-white);
+            --bg-interactive: var(--funke-light-gray);
+            --border-color: var(--funke-light-gray);
+            --text-primary: var(--funke-black);
+            --text-secondary: var(--funke-medium-gray);
+            --accent-primary: var(--funke-red-base);
+            --accent-primary-hover: var(--funke-red-hover-base);
+            --line-color: #CBD5E1; /* Farbe für Verbindungslinien, optimiert für Sichtbarkeit */
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            overflow: hidden; /* Verhindert das Scrollen der ganzen Seite */
+        }
+
+        .brand-heading {
+            font-weight: 800;
+            color: var(--text-primary);
+        }
+        
+        /* =================================================================
+         * STAMMBAUM-VISUALISIERUNG (VERTICAL "BIRDS-EYE")
+         * =================================================================
+         */
+        .tree-container {
+            padding-top: 100px; /* Mehr Platz für den Header */
+            height: 100vh;
+            width: 100vw;
+            overflow: hidden;
+            cursor: grab;
+            text-align: center; /* Zentriert das inline-block Element */
+        }
+
+        .tree-container:active {
+            cursor: grabbing;
+        }
+        
+        #panzoom-element {
+            display: inline-block; /* Stellt sicher, dass das Element seinen Inhalt für genaue Messungen umschließt */
+        }
+
+        .tree {
+            display: inline-flex; /* Sorgt dafür, dass der Container sich an den Inhalt anpasst */
+            flex-direction: column;
+            align-items: center;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .tree ul {
+            display: flex;
+            padding-top: 40px; /* Abstand zwischen den Ebenen */
+            position: relative;
+            list-style: none;
+            margin: 0;
+        }
+        
+        .tree li {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            padding: 0 20px; /* Horizontaler Abstand zwischen den Knoten */
+        }
+
+        /* --- VERBINDUNGSLINIEN --- */
+        
+        /* Horizontale Linie, die Geschwister verbindet */
+        .tree ul::before {
+            content: '';
+            position: absolute;
+            top: 20px;
+            left: 0;
+            right: 0;
+            border-top: 2px solid var(--line-color);
+        }
+
+        /* Vertikale Linie von der horizontalen Linie zum Knoten */
+        .tree li::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            border-left: 2px solid var(--line-color);
+            width: 0;
+            height: 20px;
+        }
+        
+        /* Vertikale Linie vom Knoten nach unten zu den Kindern */
+        .tree .node + ul::after {
+            content: '';
+            position: absolute;
+            bottom: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            border-left: 2px solid var(--line-color);
+            width: 0;
+            height: 20px;
+        }
+        
+        /* Linienenden bei erstem und letztem Kind anpassen */
+        .tree ul > li:first-child::before {
+            left: 0;
+            right: 50%;
+            border: none;
+            border-top: 2px solid var(--line-color);
+            border-left: 2px solid var(--line-color);
+            border-top-left-radius: 8px;
+        }
+        .tree ul > li:last-child::before {
+            left: 50%;
+            right: 0;
+            border: none;
+            border-top: 2px solid var(--line-color);
+            border-right: 2px solid var(--line-color);
+            border-top-right-radius: 8px;
+        }
+
+        /* Keine Linien für den Wurzelknoten */
+        .tree > li::before,
+        .tree > li .node + ul::after {
+            display: none;
+        }
+        
+        /* NEU: Layout für die unterste Ebene der Artikel-Karten */
+        .tree ul.article-list {
+            flex-wrap: wrap;
+            justify-content: center;
+            max-width: 1060px; /* Erlaubt 3 Karten pro Reihe (3*300px + Abstände) */
+        }
+        
+        /* Versteckt die komplexen Verbindungslinien für die Artikel-Blöcke */
+        .tree ul.article-list::before,
+        .tree ul.article-list > li::before {
+            display: none;
+        }
+
+        .node {
+            background-color: var(--bg-card);
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03), 0 1px 2px rgba(0, 0, 0, 0.06);
+            border: 1px solid var(--border-color);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            width: 300px;
+            z-index: 10;
+            position: relative;
+        }
+        
+        .node.is-clickable:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.04), 0 1px 3px rgba(0, 0, 0, 0.08);
+            border-color: var(--accent-primary);
+            cursor: pointer;
+        }
+
+        .hub > .node {
+            background-color: var(--accent-primary);
+            color: var(--funke-white);
+            border: 1px solid var(--accent-primary-hover);
+        }
+        
+        .hub > .node h2, .hub > .node h3 { color: var(--funke-white); }
+        .hub > .node p { color: var(--funke-off-white) !important; opacity: 0.9; }
+
+        .sub-hub > .node {
+            background-color: var(--funke-dark-gray);
+            border-color: var(--funke-black);
+            width: 280px; /* Sub-Hubs etwas schmaler machen */
+            padding: 1rem;
+        }
+        .hub.sub-hub > .node p { color: #A0AEC0 !important; }
+
+        .keyword-tag { color: var(--text-secondary); }
+        
+        /* =================================================================
+         * MODAL FÜR ARTIKELDETAILS
+         * =================================================================
+         */
+        .modal-backdrop {
+            position: fixed;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 40;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            pointer-events: none;
+        }
+        .modal-content {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0.95);
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            box-shadow: 0 10px 15px -3px rgba(0,0,0,.1), 0 4px 6px -4px rgba(0,0,0,.1);
+            border-radius: 0.75rem;
+            padding: 2rem;
+            z-index: 50;
+            width: 90vw;
+            max-width: 600px;
+            opacity: 0;
+            transition: opacity 0.3s ease, transform 0.3s ease;
+            pointer-events: none;
+        }
+        .modal-backdrop.is-visible { opacity: 1; pointer-events: auto; }
+        .modal-content.is-visible { opacity: 1; transform: translate(-50%, -50%) scale(1); pointer-events: auto; }
+        .modal-close-btn {
+            position: absolute;
+            top: 0.75rem; right: 0.75rem;
+            background: none; border: none;
+            cursor: pointer;
+            padding: 0.5rem;
+            color: var(--text-secondary);
+        }
+        .modal-close-btn:hover { color: var(--text-primary); }
+    </style>
+</head>
+<body class="antialiased transition-colors duration-300">
+    <div class="fixed top-0 left-0 right-0 z-20" style="background-color: rgba(248, 249, 250, 0.85); backdrop-filter: blur(4px); border-bottom: 1px solid var(--border-color);">
+        <div class="container mx-auto p-4 flex flex-col items-center">
+            <h1 class="text-3xl brand-heading tracking-tight mb-1">Evergreen Hub-Struktur: Bochum</h1>
+            <p class="text-lg mb-2" style="color: var(--text-secondary);">Birds-Eye View der thematischen Artikel-Cluster</p>
+            <nav class="flex gap-4 mt-2">
+                <a href="seo_kalender.html" class="text-accent-primary hover:text-accent-primary-hover font-semibold text-sm">SEO Kalender</a>
+                <a href="seo_kalender_saison.html" class="text-accent-primary hover:text-accent-primary-hover font-semibold text-sm">Saison-Kalender</a>
+                <a href="seo_kalender_evergreen.html" class="text-accent-primary hover:text-accent-primary-hover font-semibold text-sm">Evergreen-Katalog</a>
+                <a href="seo_birdseye.html" class="text-accent-primary hover:text-accent-primary-hover font-semibold text-sm underline">Birds-Eye</a>
+            </nav>
+        </div>
+    </div>
+
+    <div id="panzoom-container" class="tree-container">
+        <div id="panzoom-element">
+            <ul class="tree">
+                <!-- ================== WURZEL / HAUPTSEITE ================== -->
+                <li class="hub">
+                    <div class="node">
+                        <h2 class="text-2xl font-bold mb-2">Haupt-Hub: Bochum</h2>
+                        <p class="text-sm">Zentrale Anlaufstelle für alle Evergreen-Themen in Bochum.</p>
+                    </div>
+                    <!-- ================== ERSTE EBENE / THEMEN-HUBS ================== -->
+                    <ul>
+                        <!-- HUB: FREIZEIT, EVENTS & SAISONALES -->
+                        <li class="hub">
+                            <div class="node">
+                                <h2 class="text-xl font-bold mb-2">Hub: Freizeit, Events & Saisonales</h2>
+                                <p class="text-sm">Gebündelte Artikel für Ausflüge, Events und saisonale Aktivitäten.</p>
+                            </div>
+                            <ul>
+                                <li class="hub sub-hub">
+                                    <div class="node"><h2 class="text-lg font-bold">Saisonale Top-Events</h2></div>
+                                    <ul class="article-list">
+                                        <li><div class="node is-clickable" data-details="Sichtbarkeit: 0,49% | Keyword: date ideen bochum" data-link="https://www.waz.de/lokales/bochum/article404205044/valentinstag-wo-paare-in-bochum-hingehen-koennen.html" data-reason="Handlungsempfehlung: Komplett-Neufassung (03. Februar). Neue Ideen für Dates recherchieren (Restaurants, Aktivitäten, Ausflüge) und als frische Liste aufbereiten."><h3 class="font-bold">Valentinstag Tipps</h3><p class="text-sm keyword-tag">date ideen bochum</p></div></li>
+                                        <li><div class="node is-clickable" data-details="Sichtbarkeit: 0,84% | Keyword: welcher bäcker hat karfreitag geöffnet" data-link="https://www.waz.de/lokales/bochum/article408688446/frische-broetchen-zu-ostern-diese-baeckereien-haben-geoeffnet.html" data-reason="Handlungsempfehlung: UX steigern (24. März). Bäcker-Innung und einzelne große Ketten kontaktieren, um die genauen Öffnungszeiten für die Osterfeiertage abzufragen."><h3 class="font-bold">Brötchen zu Ostern</h3><p class="text-sm keyword-tag">welcher bäcker hat karfreitag geöffnet</p></div></li>
+                                        <li><div class="node is-clickable" data-details="Sichtbarkeit: 0,21% | Keyword: halloween party bochum" data-link="https://www.waz.de/lokales/bochum/article407373876/halloween-partys-in-bochum-hier-gibt-es-2024-gruselspass.html" data-reason="Handlungsempfehlung: Komplett-Neufassung (07. Oktober). Clubs und Veranstalter nach ihren Halloween-Events für das nächste Jahr fragen und Liste zusammenstellen."><h3 class="font-bold">Halloween Partys</h3><p class="text-sm keyword-tag">halloween party bochum</p></div></li>
+                                        <li><div class="node is-clickable" data-details="Sichtbarkeit: 1,66% | Keyword: weihnachtsmarkt bochum" data-link="https://www.waz.de/lokales/bochum/article404205018/weihnachtsmarkt-bochum-start-programm-oeffnungszeiten.html" data-reason="Handlungsempfehlung: Ranking verbessern (14. Oktober). Termine, Programm, Glühweinpreise und neue Stände für das nächste Jahr bei Bochum Marketing anfragen."><h3 class="font-bold">Weihnachtsmarkt Bochum</h3><p class="text-sm keyword-tag">weihnachtsmarkt bochum</p></div></li>
+                                        <li><div class="node is-clickable" data-details="Sichtbarkeit: 0,11% | Keyword: silvesterparty bochum" data-link="https://www.waz.de/lokales/bochum/article407968292/silvester-bochum--hier-wird-ins-jahr-2025-reingefeiert.html" data-reason="Handlungsempfehlung: Komplett-Neufassung (02. Dezember). Partys, Dinner-Angebote und öffentliche Events für das nächste Silvester recherchieren."><h3 class="font-bold">Silvesterparty in Bochum</h3><p class="text-sm keyword-tag">silvesterparty bochum</p></div></li>
+                                    </ul>
+                                </li>
+                                <li class="hub sub-hub">
+                                    <div class="node"><h2 class="text-lg font-bold">Feste & Kirmessen</h2></div>
+                                    <ul class="article-list">
+                                        <li><div class="node is-clickable" data-details="Sichtbarkeit: 0,64% | Keyword: rosenmontagszug bochum" data-link="https://www.waz.de/lokales/bochum/article408031220/karneval-2025bochum--wattenscheid-rosenmontag-umzug-termine-partys.html" data-reason="Handlungsempfehlung: Ranking verbessern (27. Januar). Termine für Züge (Linden, Wattenscheid) und die wichtigsten Partys (Altweiber, etc.) für die kommende Session sammeln."><h3 class="font-bold">Karneval in Bochum</h3><p class="text-sm keyword-tag">rosenmontagszug bochum</p></div></li>
+                                        <li><div class="node is-clickable" data-details="Sichtbarkeit: 0,22% | Keyword: gertrudis kirmes" data-link="https://www.waz.de/lokales/bochum/article408482671/bochums-erste-kirmes-des-jahres-wann-familien-sparen-koennen.html" data-reason="Handlungsempfehlung: Nur Daten aktualisieren (20. Februar). Termin, Öffnungszeiten und besondere Aktionen (z.B. Familientag) für die nächste Gertrudiskirmes in Wattenscheid recherchieren."><h3 class="font-bold">Gertrudis Kirmes</h3><p class="text-sm keyword-tag">gertrudis kirmes</p></div></li>
+                                        <li><div class="node is-clickable" data-details="Sichtbarkeit: 0,25% | Keyword: programm maischützen bochum" data-link="https://www.waz.de/lokales/bochum/article408583758/maiabendfest-warum-vfi-legende-leon-goretzka-dabei-ist.html" data-reason="Handlungsempfehlung: Komplett-Neufassung (21. April). Programm und besondere Gäste für das nächste Maiabendfest recherchieren und den Artikel neu aufbauen."><h3 class="font-bold">Maiabendfest</h3><p class="text-sm keyword-tag">programm maischützen bochum</p></div></li>
+                                        <li><div class="node is-clickable" data-details="Sichtbarkeit: 0,01% | Keyword: bochum total headliner" data-link="https://www.waz.de/lokales/bochum/article406655602/bochum-total-2024-programm-line-up-buehnen-ueberblick.html" data-reason="Handlungsempfehlung: Komplett-Neufassung (26. Mai). Eines der wichtigsten jährlichen Events. Muss jedes Jahr mit neuem Line-Up, Bühnenplan und Timetable aktualisiert werden."><h3 class="font-bold">Bochum Total</h3><p class="text-sm keyword-tag">bochum total headliner</p></div></li>
+                                        <li><div class="node is-clickable" data-details="Sichtbarkeit: 0,17% | Keyword: zeltfestival ruhr" data-link="https://www.waz.de/lokales/bochum/article407156755/zeltfestival-ruhr-2025-termin-und-erste-kuenstler-bestaetigt.html" data-reason="Handlungsempfehlung: Ranking verbessern (10. Juni). Wichtiges saisonales Event, jährlich mit neuem Line-Up aktualisieren. Hohe Priorität."><h3 class="font-bold">Zeltfestival Ruhr</h3><p class="text-sm keyword-tag">zeltfestival ruhr</p></div></li>
+                                    </ul>
+                                </li>
+                                 <li class="hub sub-hub">
+                                    <div class="node"><h2 class="text-lg font-bold">Lokale Freizeit-Tipps</h2></div>
+                                    <ul class="article-list">
+                                        <li><div class="node is-clickable" data-details="Sichtbarkeit: 0,44% | Keyword: eislaufen bochum" data-link="https://www.waz.de/lokales/bochum/article407881473/der-eissalon-ruhr-inbochum--oeffnet-termine-und-preise.html" data-reason="Handlungsempfehlung: Nur Daten aktualisieren (04. November). Öffnungszeiten und Preise des Eissalons Ruhr für die kommende Wintersaison prüfen."><h3 class="font-bold">Eislaufen in Bochum</h3><p class="text-sm keyword-tag">eislaufen bochum</p></div></li>
+                                        <li><div class="node is-clickable" data-details="Sichtbarkeit: 0,00% | Keyword: reitverein bochum werne turnier" data-link="https://www.waz.de/lokales/bochum/article402210807/bochum-beim-reitturnier-glaenzen-nicht-nur-ross-und-reiter.htm" data-reason="Handlungsempfehlung: Absätze ergänzen (01. Januar). Könnte in einem größeren Event-Kalender oder einer Übersicht 'Reitsport in Bochum' aufgehen."><h3 class="font-bold">Reitturnier</h3><p class="text-sm keyword-tag">reitverein bochum werne turnier</p></div></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        
+                        <!-- HUB: BILDUNG & FAMILIE -->
+                        <li class="hub">
+                            <div class="node">
+                                <h2 class="text-xl font-bold mb-2">Hub: Bildung & Familie</h2>
+                                <p class="text-sm">Alle wichtigen Ratgeber für Eltern und Familien in Bochum.</p>
+                            </div>
+                            <ul>
+                               <li class="hub sub-hub">
+                                    <div class="node"><h2 class="text-lg font-bold">Schul-Themen</h2></div>
+                                    <ul class="article-list">
+                                        <li><div class="node is-clickable" data-details="Sichtbarkeit: 0,32% | Keyword: annette von droste hülshoff bochum" data-link="https://www.waz.de/lokales/bochum/article401981765/welche-realschule-in-bochum-bietet-was-der-schul-check.html" data-reason="Handlungsempfehlung: Service-Aktualität (08. Januar). Sehr hoher Service-Wert für Eltern, jährliche Prüfung vor den Anmeldefristen. Exakt terminiert für die Planungsphase."><h3 class="font-bold">Schul-Check: Realschulen</h3><p class="text-sm keyword-tag">annette von droste hülshoff bochum</p></div></li>
+                                        <li><div class="node is-clickable" data-details="Sichtbarkeit: 0,05% | Keyword: kleine raupe bochum" data-link="https://www.waz.de/lokales/bochum/article406656292/einschulung-in-bochum-so-spart-man-bei-tornistern-und-co.html" data-reason="Handlungsempfehlung: Ranking verbessern (11. Juni). Wichtiger saisonaler Ratgeber. Jährlich vor der Einschulung mit aktuellen Spartipps und Händler-Aktionen aktualisieren."><h3 class="font-bold">Einschulung: Sparen</h3><p class="text-sm keyword-tag">kleine raupe bochum</p></div></li>
+                                        <li><div class="node is-clickable" data-details="Sichtbarkeit: 0,06% | Keyword: angold behrendt" data-link="https://www.waz.de/lokales/bochum/article407078524/i-doetzchen-2024-inbochum--die-fotos-der-grundschulen.html" data-reason="Handlungsempfehlung: UX steigern (20. August). Jährliches Format mit extrem hoher lokaler Relevanz. Prozess für die Foto-Bestellung und Veröffentlichung optimieren."><h3 class="font-bold">i-Dötzchen Fotos</h3><p class="text-sm keyword-tag">angold behrendt</p></div></li>
+                                    </ul>
+                                </li>
+                                <li class="hub sub-hub">
+                                    <div class="node"><h2 class="text-lg font-bold">Familien-Service</h2></div>
+                                    <ul class="article-list">
+                                        <li><div class="node is-clickable" data-details="Sichtbarkeit: 0,34% | Keyword: neubau kita bochum" data-link="https://www.waz.de/lokales/bochum/article408338569/kitas-oeffnen-inbochum--hier-gibt-es-bald-neue-plaetze.html" data-reason="Handlungsempfehlung: Service-Aktualität (2. Feb & 15. Jul). Guter Service-Artikel, der regelmäßig aktualisiert werden kann. Eltern suchen oft zu Beginn des Jahres und kurz vor dem neuen Kindergartenjahr."><h3 class="font-bold">Neue Kita-Plätze</h3><p class="text-sm keyword-tag">neubau kita bochum</p></div></li>
+                                        <li><div class="node is-clickable" data-details="Sichtbarkeit: 0,02% | Keyword: die schwimmschule bochum" data-link="https://www.waz.de/lokales/bochum/article407023207/wo-gibt-es--schwimmkurse-in-bochum-die-infos-im-ueberblick.html" data-reason="Handlungsempfehlung: Liste aktualisieren (04. März). Hoher Service-Wert für Familien. Liste der Anbieter, Wartezeiten und Kosten aktuell halten. Eltern planen lange im Voraus."><h3 class="font-bold">Schwimmkurse in Bochum</h3><p class="text-sm keyword-tag">die schwimmschule bochum</p></div></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <!-- HUB: GASTRO & SHOPPING -->
+                        <li class="hub">
+                            <div class="node">
+                                <h2 class="text-xl font-bold mb-2">Hub: Gastro & Shopping</h2>
+                                <p class="text-sm">Die besten Tipps zum Essen, Trinken und Einkaufen.</p>
+                            </div>
+                             <ul>
+                                <li class="hub sub-hub">
+                                    <div class="node"><h2 class="text-lg font-bold">Gastronomie-Guides</h2></div>
+                                    <ul class="article-list">
+                                        <li><div class="node is-clickable" data-details="Sichtbarkeit: 0,47% | Keyword: frühstück bochum" data-link="https://www.waz.de/lokales/bochum/article408627535/draussen-fruehstuecken-in-bochum-acht-cafe-tipps-mit-terrasse.html" data-reason="Handlungsempfehlung: Ranking verbessern (15. April). Klassischer Evergreen-Listen-Artikel. SEO-Vorlauf: Idealer Zeitpunkt, um rechtzeitig zur Terrassen-Saison organische Sichtbarkeit aufzubauen."><h3 class="font-bold">Draußen frühstücken</h3><p class="text-sm keyword-tag">frühstück bochum</p></div></li>
+                                        <li><div class="node is-clickable" data-details="Sichtbarkeit: 0,23% | Keyword: biergarten bochum" data-link="https://www.waz.de/lokales/bochum/article406416074/in-bochum-draussen-essen-und-trinken-zehn-schoenebiergaerten.html" data-reason="Handlungsempfehlung: Ranking verbessern (10. April). Vor der Sommersaison auf Aktualität prüfen. Idealer Vorlauf, um pünktlich zu den ersten warmen Tagen top bei Google zu ranken."><h3 class="font-bold">Zehn schöne Biergärten</h3><p class="text-sm keyword-tag">biergarten bochum</p></div></li>
+                                        <li><div class="node is-clickable" data-details="Sichtbarkeit: 0,07% | Keyword: polizeikantine bochum" data-link="https://www.waz.de/lokales/bochum/article401814363/wir-bitten-zu-tisch-guenstige-mittagsangebote-in-bochum.html" data-reason="Handlungsempfehlung: Evergreen-Liste (9. Januar). Perfekter Listen-Artikel. Regelmäßig auf Aktualität prüfen. Füllt das Saisonloch zu Jahresbeginn."><h3 class="font-bold">Günstige Mittagsangebote</h3><p class="text-sm keyword-tag">polizeikantine bochum</p></div></li>
+                                        <li><div class="node is-clickable" data-details="Sichtbarkeit: 0,05% | Keyword: bochum geht aus" data-link="https://www.waz.de/lokales/bochum/article406403347/bochum-geht-aus-das-sind-die-besten-restaurants-der-stadt.html" data-reason="Handlungsempfehlung: Evergreen-Liste (1. Juni). Top-Kandidat. Sehr hohes Potenzial. Liste auf Aktualität prüfen, neue Restaurants ergänzen. Thematischer Peak zur Sommersaison."><h3 class="font-bold">Beste Restaurants</h3><p class="text-sm keyword-tag">bochum geht aus</p></div></li>
+                                    </ul>
+                                </li>
+                                <li class="hub sub-hub">
+                                    <div class="node"><h2 class="text-lg font-bold">Shopping & Termine</h2></div>
+                                    <ul class="article-list">
+                                        <li><div class="node is-clickable" data-details="Sichtbarkeit: 0,64% | Keyword: ruhr park" data-link="https://www.waz.de/lokales/bochum/article408855915/ruhrpark-inbochum--diese-sieben-geschaefte-sind-neu.html" data-reason="Handlungsempfehlung: Aktualität sichern (10. Juni). Guter Listen-Artikel, der regelmäßig auf neue Geschäfte geprüft werden kann. Thematischer Peak: Passend zum Beginn des Sommers."><h3 class="font-bold">Ruhrpark: Neue Geschäfte</h3><p class="text-sm keyword-tag">ruhr park</p></div></li>
+                                        <li><div class="node is-clickable" data-details="Sichtbarkeit: 0,22% | Keyword: verkaufsoffener sonntag bochum" data-link="https://www.waz.de/lokales/bochum/article406051737/verkaufsoffene-sonntage-in-bochum-das-ist-fuer-2024-geplant.html" data-reason="Handlungsempfehlung: Ranking verbessern (20. November). Die Termine für das kommende Jahr bei der Stadt und den Werbegemeinschaften anfragen und veröffentlichen."><h3 class="font-bold">Verkaufsoffene Sonntage</h3><p class="text-sm keyword-tag">verkaufsoffener sonntag bochum</p></div></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <!-- HUB: ALLTAG & SERVICE -->
+                        <li class="hub">
+                            <div class="node">
+                                <h2 class="text-xl font-bold mb-2">Hub: Alltag & Service</h2>
+                                <p class="text-sm">Praktische Ratgeber und Listen für das tägliche Leben.</p>
+                            </div>
+                            <ul>
+                                <li class="hub sub-hub">
+                                     <div class="node"><h2 class="text-lg font-bold">Städtischer Service</h2></div>
+                                     <ul class="article-list">
+                                        <li><div class="node is-clickable" data-details="Sichtbarkeit: 0,19% | Keyword: notfallapotheke bochum" data-link="https://www.waz.de/lokales/bochum/article401479567/apotheken-notdienst-in-bochum-wer-hatgeoeffnet.html" data-reason="Handlungsempfehlung: Service-Aktualität (02. November). Wichtiger Service. Mit Link zur offiziellen Suche anreichern und aktuell halten. Thematischer Peak zum Start der Erkältungssaison."><h3 class="font-bold">Apotheken-Notdienst</h3><p class="text-sm keyword-tag">notfallapotheke bochum</p></div></li>
+                                        <li><div class="node is-clickable" data-details="Sichtbarkeit: 0,13% | Keyword: bogestra fahrplan" data-link="https://www.waz.de/lokales/bochum/article408001114/neuer-fahrplan-der-bogestra-was-sich-in-bochum-aendert.html" data-reason="Handlungsempfehlung: Ranking verbessern (27. November). Die wichtigsten Änderungen zum jährlichen Fahrplanwechsel im Dezember übersichtlich darstellen."><h3 class="font-bold">Neuer Fahrplan der Bogestra</h3><p class="text-sm keyword-tag">bogestra fahrplan</p></div></li>
+                                        <li><div class="node is-clickable" data-details="Sichtbarkeit: 0,07% | Keyword: altkleidercontainer bochum" data-link="https://www.waz.de/lokales/bochum/article407242087/altkleider-abgeben-geld-bekommen-so-gehts-in-bochum.html" data-reason="Handlungsempfehlung: Service-Thema (8. Jan & 25. Mär). Guter Evergreen-Ratgeber. Relevanz-Peaks nach Weihnachten und zum Frühjahrsputz. Standorte prüfen."><h3 class="font-bold">Altkleider abgeben</h3><p class="text-sm keyword-tag">altkleidercontainer bochum</p></div></li>
+                                     </ul>
+                                </li>
+                                <li class="hub sub-hub">
+                                     <div class="node"><h2 class="text-lg font-bold">Lebensplanung & Fitness</h2></div>
+                                     <ul class="article-list">
+                                        <li><div class="node is-clickable" data-details="Sichtbarkeit: 0,17% | Keyword: standesamt bochum öffnungszeiten" data-link="https://www.waz.de/lokales/bochum/article406839961/heiraten-in-bochum-diese-trauorte-sind-am-beliebtesten.html" data-reason="Handlungsempfehlung: Ranking verbessern (6. Jan & 14. Feb). Wichtiger Service-Artikel. Hauptplanungsphase beginnt im Januar."><h3 class="font-bold">Heiraten in Bochum</h3><p class="text-sm keyword-tag">standesamt bochum</p></div></li>
+                                        <li><div class="node is-clickable" data-details="Sichtbarkeit: 0,15% | Keyword: oase bochum preise" data-link="https://www.waz.de/lokales/bochum/article407101968/training-in-bochum-welches-fitnessstudio-passt-zu-mir.html" data-reason="Handlungsempfehlung: Ranking verbessern (02. Januar). Perfekter Ratgeber-Artikel, der verschiedene Studios vergleicht. Thematischer Peak: Perfekt abgestimmt auf die Neujahrsvorsätze."><h3 class="font-bold">Fitnessstudio-Vergleich</h3><p class="text-sm keyword-tag">oase bochum preise</p></div></li>
+                                     </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+    
+    <!-- Modal Container -->
+    <div id="modal-backdrop" class="modal-backdrop">
+        <div id="modal-content" class="modal-content">
+             <!-- Content wird per JS eingefügt -->
+        </div>
+    </div>
+
+    <!-- Zoom Controls -->
+    <div class="fixed bottom-4 right-4 z-30 flex flex-col gap-2">
+        <button id="zoom-in-btn" class="w-10 h-10 bg-white rounded-full shadow-md flex items-center justify-center text-xl font-bold text-gray-600 hover:bg-gray-100 transition">+</button>
+        <button id="zoom-out-btn" class="w-10 h-10 bg-white rounded-full shadow-md flex items-center justify-center text-xl font-bold text-gray-600 hover:bg-gray-100 transition">-</button>
+        <button id="reset-btn" class="w-10 h-10 bg-white rounded-full shadow-md flex items-center justify-center text-gray-600 hover:bg-gray-100 transition">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4 4v5h5M20 20v-5h-5M4 20h5v-5M20 4h-5v5" />
+            </svg>
+        </button>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const panzoomContainer = document.getElementById('panzoom-container');
+            const panzoomElement = document.getElementById('panzoom-element');
+            
+            if (panzoomElement && panzoomContainer) {
+                const panzoom = Panzoom(panzoomElement, {
+                    maxScale: 2,
+                    minScale: 0.1,
+                    canvas: true,
+                });
+
+                panzoomContainer.addEventListener('wheel', panzoom.zoomWithWheel);
+                
+                document.getElementById('zoom-in-btn').addEventListener('click', () => panzoom.zoomIn());
+                document.getElementById('zoom-out-btn').addEventListener('click', () => panzoom.zoomOut());
+                document.getElementById('reset-btn').addEventListener('click', () => setInitialView(panzoom));
+
+                const setInitialView = (pzInstance) => {
+                    // This function automatically calculates the correct zoom and position
+                    // to make the entire tree visible within the viewport.
+                    // A short delay ensures all elements are rendered before calculating their dimensions.
+                    setTimeout(() => {
+                        pzInstance.reset({ animate: false });
+
+                        const containerRect = panzoomContainer.getBoundingClientRect();
+                        const contentRect = panzoomElement.getBoundingClientRect();
+                        
+                        // Calculate the scale factor to fit the entire content, leaving a small 5% margin
+                        const scale = Math.min(
+                            containerRect.width / contentRect.width, 
+                            containerRect.height / contentRect.height
+                        ) * 0.95;
+                        
+                        pzInstance.zoom(scale, { animate: false });
+                        
+                        // Recalculate position after zooming to perfectly center the content
+                        const newContentRect = panzoomElement.getBoundingClientRect();
+                        const x = (containerRect.width - newContentRect.width) / 2;
+                        const y = (containerRect.height - newContentRect.height) / 2;
+                        
+                        pzInstance.pan(x, y, { animate: false });
+                    }, 200); // Increased delay slightly for stability
+                };
+
+                window.onload = () => setInitialView(panzoom);
+                window.addEventListener('resize', () => setInitialView(panzoom));
+            }
+
+            // Modal Logic
+            const modalBackdrop = document.getElementById('modal-backdrop');
+            const modalContent = document.getElementById('modal-content');
+            const clickableNodes = document.querySelectorAll('.node.is-clickable');
+
+            const showModal = (node) => {
+                const { details, link, reason } = node.dataset;
+                const title = node.querySelector('h3').innerText;
+
+                modalContent.innerHTML = `
+                    <button id="modal-close-btn" class="modal-close-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                    <h2 class="text-2xl font-bold mb-2" style="color: var(--text-primary);">${title}</h2>
+                    <p class="text-sm mb-3" style="color: var(--text-secondary);">${details}</p>
+                    <a href="${link}" target="_blank" class="text-accent-primary hover:text-accent-primary-hover text-sm break-all">Link zur Quelle</a>
+                    <hr class="my-4" style="border-color: var(--border-color);">
+                    <h3 class="font-bold text-lg text-accent-primary mb-2">Handlungsempfehlung & Begründung</h3>
+                    <p style="color: var(--text-primary);">${reason}</p>
+                `;
+
+                modalBackdrop.classList.add('is-visible');
+                modalContent.classList.add('is-visible');
+                
+                // Event listener for the new close button
+                document.getElementById('modal-close-btn').addEventListener('click', hideModal);
+            };
+
+            const hideModal = () => {
+                modalBackdrop.classList.remove('is-visible');
+                modalContent.classList.remove('is-visible');
+            };
+
+            clickableNodes.forEach(node => {
+                node.addEventListener('click', (event) => {
+                    event.stopPropagation(); // Verhindert das Schwenken beim Klicken
+                    showModal(node);
+                });
+            });
+
+            // Close modal when clicking on the backdrop
+            modalBackdrop.addEventListener('click', (event) => {
+                if (event.target === modalBackdrop) {
+                    hideModal();
+                }
+            });
+
+            // Close modal with Escape key
+            document.addEventListener('keydown', (event) => {
+                if (event.key === 'Escape' && modalBackdrop.classList.contains('is-visible')) {
+                    hideModal();
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+

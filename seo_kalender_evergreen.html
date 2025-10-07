@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evergreen SEO Katalog – Bochum</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FUNKE CI Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        /* =================================================================
+         * GRUNDLAGEN & THEME-DEFINITION (FUNKE CI)
+         * =================================================================
+         */
+        :root {
+            /* -- Basis-Farbpalette (FUNKE) -- */
+            --funke-red-base: #ED1C24;
+            --funke-red-hover-base: #C81219;
+            --funke-black: #1A1A1A;
+            --funke-dark-gray: #333333;
+            --funke-medium-gray: #6C757D;
+            --funke-light-gray: #E9ECEF;
+            --funke-off-white: #F8F9FA;
+            --funke-white: #FFFFFF;
+
+            /* -- Semantische Farbvariablen -- */
+            --bg-primary: var(--funke-off-white); /* Hintergrund */
+            --bg-card: var(--funke-white);
+            --bg-interactive: var(--funke-light-gray);
+            --border-color: var(--funke-light-gray);
+            --text-primary: var(--funke-black);
+            --text-secondary: var(--funke-medium-gray);
+            --accent-primary: var(--funke-red-base);
+            --accent-primary-hover: var(--funke-red-hover-base);
+        }
+
+        /* Dark Mode (Optional, aber CI-konform) */
+        html.dark {
+            --bg-primary: #121212;
+            --bg-card: var(--funke-black);
+            --border-color: var(--funke-dark-gray);
+            --text-primary: #F7FAFC;
+            --text-secondary: #A0AEC0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+        }
+        
+        /* =================================================================
+         * KOMPONENTEN-STILE (CI-Adaption)
+         * =================================================================
+         */
+
+        .brand-heading {
+            font-weight: 800;
+            color: var(--text-primary);
+        }
+
+        .section-card {
+            background-color: var(--bg-card);
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03), 0 1px 2px rgba(0, 0, 0, 0.06);
+            border: 1px solid var(--border-color);
+            transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+        }
+        .section-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.04), 0 1px 3px rgba(0, 0, 0, 0.08);
+        }
+
+        /* NEU: Styling für Monats-Header */
+        .month-header {
+            grid-column: 1 / -1;
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+            border-bottom: 2px solid var(--accent-primary);
+            padding-bottom: 0.5rem;
+        }
+
+        .text-accent-primary { color: var(--accent-primary); }
+        .hover\:text-accent-primary-hover:hover { color: var(--accent-primary-hover); }
+
+    </style>
+</head>
+<body class="antialiased transition-colors duration-300">
+    <div class="container mx-auto p-4 sm:p-8">
+        <header class="mb-8 text-center">
+            <h1 class="text-4xl brand-heading mb-2">Evergreen SEO Katalog: Bochum</h1>
+            <p class="text-xl mb-2" style="color: var(--text-secondary);">Konsolidierte Übersicht der wichtigsten Service- und Listen-Artikel</p>
+            <nav class="flex gap-4 justify-center mt-2">
+                <a href="seo_kalender.html" class="text-accent-primary hover:text-accent-primary-hover font-semibold text-sm">SEO Kalender</a>
+                <a href="seo_kalender_saison.html" class="text-accent-primary hover:text-accent-primary-hover font-semibold text-sm">Saison-Kalender</a>
+                <a href="seo_kalender_evergreen.html" class="text-accent-primary hover:text-accent-primary-hover font-semibold text-sm underline">Evergreen-Katalog</a>
+                <a href="seo_birdseye.html" class="text-accent-primary hover:text-accent-primary-hover font-semibold text-sm">Birds-Eye</a>
+            </nav>
+        </header>
+
+        <div id="article-list" class="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+
+            <!-- ======================= JANUAR ======================= -->
+            <div id="januar" class="month-header">
+                <h2 class="text-3xl font-extrabold" style="color: var(--text-primary);">Januar</h2>
+            </div>
+
+            <!-- Artikel: Trödelmärkte und Flohmarkt -->
+            <div class="section-card">
+                <h2 class="text-2xl font-bold mb-2" style="color: var(--text-primary);">Trödelmärkte und Flohmarkt</h2>
+                <p class="text-sm mb-3" style="color: var(--text-secondary);">Sichtbarkeit: 1,55% | Keyword: <span class="font-semibold">flohmarkt bochum</span></p>
+                <a href="https://www.waz.de/lokales/bochum/article404899975/troedelmaerkte-und-flohmarkt-inbochum--diese-regelmaessigen-termine--gibt-es.html" target="_blank" class="text-accent-primary hover:text-accent-primary-hover text-sm break-all">Link zur Quelle</a>
+                <hr class="my-4" style="border-color: var(--border-color);">
+                <h3 class="font-bold text-lg text-accent-primary mb-2">Begründung für Evergreen</h3>
+                <p style="color: var(--text-primary);">
+                    Klassischer, saisonaler Service-Artikel mit <span class="font-bold">sehr hoher, wiederkehrender Sichtbarkeit</span>. Erfüllt ein saisonales Loch zu Jahresbeginn. Muss ständig auf aktuelle Termine geprüft werden, um das Top-Ranking zu sichern.
+                </p>
+            </div>
+
+            <!-- Artikel: Schul-Checks -->
+            <div class="section-card">
+                <h2 class="text-2xl font-bold mb-2" style="color: var(--text-primary);">Schul-Check (Alle Schulformen)</h2>
+                <p class="text-sm mb-3" style="color: var(--text-secondary);">Sichtbarkeit: Hoch (0,32% - 0,03%) | Keywords: <span class="font-semibold">annette von droste hülshoff bochum, nms bochum, privatschulen bochum</span></p>
+                <button id="schul-check-toggle" aria-expanded="false" aria-controls="schul-check-links" class="text-accent-primary hover:text-accent-primary-hover text-sm font-semibold flex items-center gap-1 border-none bg-transparent p-0 cursor-pointer focus:outline-none focus:ring-0">
+                    <span class="underline">Quellen anzeigen</span>
+                    <svg id="toggle-icon" class="w-4 h-4 text-accent-primary transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </button>
+                <div id="schul-check-links" class="hidden max-h-0 overflow-hidden transition-all duration-300 mt-3 space-y-2 p-3 rounded-md" style="background-color: var(--bg-interactive); border: 1px solid var(--border-color);">
+                    <p class="font-bold text-sm mb-1" style="color: var(--text-primary);">Einzelne Schul-Check-Artikel:</p>
+                    <a href="https://www.waz.de/lokales/bochum/article401981765/welche-realschule-in-bochum-bietet-was-der-schul-check.html" target="_blank" class="block text-sm text-accent-primary hover:text-accent-primary-hover break-all">Realschulen</a>
+                    <a href="https://www.waz.de/lokales/bochum/article402234113/welche-hauptschule-in-bochum-bietet-was-der-schul-check.html" target="_blank" class="block text-sm text-accent-primary hover:text-accent-primary-hover break-all">Hauptschulen</a>
+                    <a href="https://www.waz.de/lokales/bochum/article402266856/welche-sekundarschule-in-bochum-bietet-was-der-schul-check.html" target="_blank" class="block text-sm text-accent-primary hover:text-accent-primary-hover break-all">Sekundarschulen</a>
+                    <a href="https://www.waz.de/lokales/bochum/article401478506/welches-gymnasium-in-bochum-bietet-was-der-schul-check.html" target="_blank" class="block text-sm text-accent-primary hover:text-accent-primary-hover break-all">Gymnasien</a>
+                    <a href="https://www.waz.de/lokales/bochum/article407837831/private-schulen-in-bochum-im-check-welche-bietet--was.html" target="_blank" class="block text-sm text-accent-primary hover:text-accent-primary-hover break-all">Private Schulen</a>
+                </div>
+                <hr class="my-4" style="border-color: var(--border-color);">
+                <h3 class="font-bold text-lg text-accent-primary mb-2">Begründung für Evergreen</h3>
+                <p style="color: var(--text-primary);">
+                    <span class="font-bold">Extrem hoher lokaler Service-Wert für Eltern.</span> Das Timing vor den Anmeldefristen (Januar) ist kritisch. Es wird dringend empfohlen, die einzelnen Schul-Checks (Realschule, Gymnasium, etc.) zu einem zentralen "Schul-Hub" zusammenzuführen und jährlich zu aktualisieren.
+                </p>
+            </div>
+            
+            <!-- Artikel: Heiraten in Bochum -->
+            <div class="section-card">
+                <h2 class="text-2xl font-bold mb-2" style="color: var(--text-primary);">Heiraten in Bochum (Trauorte)</h2>
+                <p class="text-sm mb-3" style="color: var(--text-secondary);">Sichtbarkeit: 0,17% | Keyword: <span class="font-semibold">standesamt bochum öffnungszeiten</span></p>
+                <a href="https://www.waz.de/lokales/bochum/article406839961/heiraten-in-bochum-diese-trauorte-sind-am-beliebtesten.html" target="_blank" class="text-accent-primary hover:text-accent-primary-hover text-sm break-all">Link zur Quelle</a>
+                <hr class="my-4" style="border-color: var(--border-color);">
+                <h3 class="font-bold text-lg text-accent-primary mb-2">Begründung für Evergreen</h3>
+                <p style="color: var(--text-primary);">
+                    Wichtiger Service-Artikel für die Hochzeitsplanung. Die <span class="font-bold">Hauptplanungsphase beginnt im Januar</span> (nach den Weihnachtsverlobungen). Regelmäßige Prüfung auf neue Trauorte oder geänderte Bedingungen ist nötig.
+                </p>
+            </div>
+
+            <!-- Artikel: Fitnessstudio Vergleich -->
+            <div class="section-card">
+                <h2 class="text-2xl font-bold mb-2" style="color: var(--text-primary);">Welches Fitnessstudio passt zu mir?</h2>
+                <p class="text-sm mb-3" style="color: var(--text-secondary);">Sichtbarkeit: 0,15% | Keyword: <span class="font-semibold">oase bochum preise</span></p>
+                <a href="https://www.waz.de/lokales/bochum/article407101968/training-in-bochum-welches-fitnessstudio-passt-zu-mir.html" target="_blank" class="text-accent-primary hover:text-accent-primary-hover text-sm break-all">Link zur Quelle</a>
+                <hr class="my-4" style="border-color: var(--border-color);">
+                <h3 class="font-bold text-lg text-accent-primary mb-2">Begründung für Evergreen</h3>
+                <p style="color: var(--text-primary);">
+                    Perfekter Ratgeber-Artikel mit einem <span class="font-bold">extrem starken thematischen Peak im Januar</span> (Neujahrsvorsätze). Er dient als idealer SEO-Köder, um User zum Jahresbeginn auf die Seite zu ziehen.
+                </p>
+            </div>
+            
+            <!-- Artikel: Altkleider abgeben -->
+            <div class="section-card">
+                <h2 class="text-2xl font-bold mb-2" style="color: var(--text-primary);">Altkleider abgeben (Ratgeber)</h2>
+                <p class="text-sm mb-3" style="color: var(--text-secondary);">Sichtbarkeit: 0,07% | Keyword: <span class="font-semibold">altkleidercontainer bochum</span></p>
+                <a href="https://www.waz.de/lokales/bochum/article407242087/altkleider-abgeben-geld-bekommen-so-gehts-in-bochum.html" target="_blank" class="text-accent-primary hover:text-accent-primary-hover text-sm break-all">Link zur Quelle</a>
+                <hr class="my-4" style="border-color: var(--border-color);">
+                <h3 class="font-bold text-lg text-accent-primary mb-2">Begründung für Evergreen</h3>
+                <p style="color: var(--text-primary);">
+                    Nützlicher Evergreen-Ratgeber. Relevanz-Peaks liegen nach Weihnachten (Januar) und zum Frühjahrsputz (März). <span class="font-bold">Standorte und aktuelle Anbieter</span> müssen jährlich geprüft werden.
+                </p>
+            </div>
+            
+            <!-- Artikel: Jobsuche in Bochum -->
+            <div class="section-card">
+                <h2 class="text-2xl font-bold mb-2" style="color: var(--text-primary);">Jobsuche in Bochum (Ratgeber)</h2>
+                <p class="text-sm mb-3" style="color: var(--text-secondary);">Sichtbarkeit: 0,03% | Keyword: <span class="font-semibold">waz bochum stellenangebote</span></p>
+                <a href="https://www.waz.de/lokales/bochum/article406568490/messe-insta-posts-bochum--sucht-personal-auf-allen-kanaelen.html" target="_blank" class="text-accent-primary hover:text-accent-primary-hover text-sm break-all">Link zur Quelle</a>
+                <hr class="my-4" style="border-color: var(--border-color);">
+                <h3 class="font-bold text-lg text-accent-primary mb-2">Begründung für Evergreen</h3>
+                <p style="color: var(--text-primary);">
+                    Gute Basis, um ihn zu einem umfassenden <span class="font-bold">Ratgeber zur Jobsuche</span> auszubauen. Wichtig im Januar (Neujahrsvorsätze) zur beruflichen Neuorientierung.
+                </p>
+            </div>
+
+            <!-- ======================= MÄRZ ======================= -->
+            <div id="maerz" class="month-header">
+                <h2 class="text-3xl font-extrabold" style="color: var(--text-primary);">März</h2>
+            </div>
+            
+            <!-- Artikel: Draußen frühstücken / Biergärten -->
+            <div class="section-card">
+                <h2 class="text-2xl font-bold mb-2" style="color: var(--text-primary);">Draußen frühstücken & Biergärten</h2>
+                <p class="text-sm mb-3" style="color: var(--text-secondary);">Sichtbarkeit: Hoch (0,47% / 0,23%) | Keywords: <span class="font-semibold">frühstück bochum, biergarten bochum</span></p>
+                <a href="https://www.waz.de/lokales/bochum/article408627535/draussen-fruehstuecken-in-bochum-acht-cafe-tipps-mit-terrasse.html" target="_blank" class="text-accent-primary hover:text-accent-primary-hover text-sm break-all">Link zur Quelle (Frühstück)</a>
+                <hr class="my-4" style="border-color: var(--border-color);">
+                <h3 class="font-bold text-lg text-accent-primary mb-2">Begründung für Evergreen</h3>
+                <p style="color: var(--text-primary);">
+                    Starke <span class="font-bold">saisonale Evergreen-Themen</span> mit massivem Peak im Frühling/Sommer. Frühzeitige Updates (März/April) sind notwendig, um pünktlich zum Start der Freiluftsaison Top-Rankings zu erzielen und das Interesse maximal auszuschöpfen.
+                </p>
+            </div>
+
+            <!-- Artikel: Schwimmkurse in Bochum -->
+            <div class="section-card">
+                <h2 class="text-2xl font-bold mb-2" style="color: var(--text-primary);">Schwimmkurse in Bochum (Übersicht)</h2>
+                <p class="text-sm mb-3" style="color: var(--text-secondary);">Sichtbarkeit: 0,02% | Keyword: <span class="font-semibold">die schwimmschule bochum</span></p>
+                <a href="https://www.waz.de/lokales/bochum/article407023207/wo-gibt-es--schwimmkurse-in-bochum-die-infos-im-ueberblick.html" target="_blank" class="text-accent-primary hover:text-accent-primary-hover text-sm break-all">Link zur Quelle</a>
+                <hr class="my-4" style="border-color: var(--border-color);">
+                <h3 class="font-bold text-lg text-accent-primary mb-2">Begründung für Evergreen</h3>
+                <p style="color: var(--text-primary);">
+                    <span class="font-bold">Hoher Service-Wert für Familien</span>, da die Wartelisten oft lang sind. Planung beginnt vor dem Sommer (März). Muss Anbieter, Wartezeiten und Kosten aktuell halten.
+                </p>
+            </div>
+            
+            <!-- ======================= APRIL ======================= -->
+            <div id="april" class="month-header">
+                <h2 class="text-3xl font-extrabold" style="color: var(--text-primary);">April</h2>
+            </div>
+            
+            <!-- Artikel: Tierpark Bochum -->
+            <div class="section-card">
+                <h2 class="text-2xl font-bold mb-2" style="color: var(--text-primary);">Tierpark Bochum (Guide)</h2>
+                <p class="text-sm mb-3" style="color: var(--text-secondary);">Sichtbarkeit: 0,25% | Keyword: <span class="font-semibold">tierpark bochum</span></p>
+                <a href="https://www.waz.de/lokales/bochum/article404165169/tierpark-bochum-alle-infos-zu-tickets-anreise-tieren.html" target="_blank" class="text-accent-primary hover:text-accent-primary-hover text-sm break-all">Link zur Quelle</a>
+                <hr class="my-4" style="border-color: var(--border-color);">
+                <h3 class="font-bold text-lg text-accent-primary mb-2">Begründung für Evergreen</h3>
+                <p style="color: var(--text-primary);">
+                    Ein <span class="font-bold">fundamentaler Guide</span> für ein wichtiges, lokales Ausflugsziel. Muss jährlich vor Beginn der Hauptsaison (Frühling/Feiertage wie der 1. Mai) auf korrekte Preise und Öffnungszeiten geprüft werden.
+                </p>
+            </div>
+            
+            <!-- Artikel: Lauftreffs in Bochum -->
+            <div class="section-card">
+                <h2 class="text-2xl font-bold mb-2" style="color: var(--text-primary);">Lauftreffs in Bochum (Übersicht)</h2>
+                <p class="text-sm mb-3" style="color: var(--text-secondary);">Sichtbarkeit: 0,04% | Keyword: <span class="font-semibold">lauftreff bochum weitmarer holz</span></p>
+                <a href="https://www.waz.de/lokales/bochum/article409295730/lauftreffs-in-bochum-welche-es-gibt-wann-sie-stattfinden.html" target="_blank" class="text-accent-primary hover:text-accent-primary-hover text-sm break-all">Link zur Quelle</a>
+                <hr class="my-4" style="border-color: var(--border-color);">
+                <h3 class="font-bold text-lg text-accent-primary mb-2">Begründung für Evergreen</h3>
+                <p style="color: var(--text-primary);">
+                    Exzellenter lokaler <span class="font-bold">Sport-Service-Artikel</span>. Starke Relevanz im Frühling (April), wenn viele mit dem Sport beginnen. Zeiten und Treffpunkte müssen regelmäßig auf Aktualität geprüft werden.
+                </p>
+            </div>
+            
+            <!-- ======================= JUNI ======================= -->
+            <div id="juni" class="month-header">
+                <h2 class="text-3xl font-extrabold" style="color: var(--text-primary);">Juni</h2>
+            </div>
+            
+            <!-- Artikel: Günstige Mittagsangebote -->
+            <div class="section-card">
+                <h2 class="text-2xl font-bold mb-2" style="color: var(--text-primary);">Günstige Mittagsangebote</h2>
+                <p class="text-sm mb-3" style="color: var(--text-secondary);">Sichtbarkeit: 0,07% | Keyword: <span class="font-semibold">polizeikantine bochum</span></p>
+                <a href="https://www.waz.de/lokales/bochum/article401814363/wir-bitten-zu-tisch-guenstige-mittagsangebote-in-bochum.html" target="_blank" class="text-accent-primary hover:text-accent-primary-hover text-sm break-all">Link zur Quelle</a>
+                <hr class="my-4" style="border-color: var(--border-color);">
+                <h3 class="font-bold text-lg text-accent-primary mb-2">Begründung für Evergreen</h3>
+                <p style="color: var(--text-primary);">
+                    Klassische <span class="font-bold">Evergreen-Liste mit hohem Alltags-Service-Wert</span> (Daily Utility). Muss regelmäßig auf geänderte Preise oder neue Lokale geprüft werden, um seine Relevanz konstant hoch zu halten.
+                </p>
+            </div>
+
+            <!-- Artikel: Ruhrpark -->
+            <div class="section-card">
+                <h2 class="text-2xl font-bold mb-2" style="color: var(--text-primary);">Ruhrpark: Neue & Geschlossene Geschäfte</h2>
+                <p class="text-sm mb-3" style="color: var(--text-secondary);">Sichtbarkeit: Hoch (0,64% / 0,05%) | Keyword: <span class="font-semibold">ruhr park, ruhrpark bochum geschäfte</span></p>
+                <a href="https://www.waz.de/lokales/bochum/article408855915/ruhrpark-inbochum--diese-sieben-geschaefte-sind-neu.html" target="_blank" class="text-accent-primary hover:text-accent-primary-hover text-sm break-all">Link zur Quelle</a>
+                <hr class="my-4" style="border-color: var(--border-color);">
+                <h3 class="font-bold text-lg text-accent-primary mb-2">Begründung für Evergreen</h3>
+                <p style="color: var(--text-primary);">
+                    <span class="font-bold">Hoher lokaler Service-Wert.</span> Die Liste ist ganzjährig relevant, erfährt aber einen Peak zu neuen Kollektionen (Sommerbeginn). Muss regelmäßig auf neue Läden und Schließungen geprüft und die zwei Artikel zusammengeführt werden.
+                </p>
+            </div>
+            
+            <!-- ======================= JULI ======================= -->
+            <div id="juli" class="month-header">
+                <h2 class="text-3xl font-extrabold" style="color: var(--text-primary);">Juli</h2>
+            </div>
+            
+            <!-- Artikel: Restaurant Hub -->
+            <div class="section-card">
+                <h2 class="text-2xl font-bold mb-2" style="color: var(--text-primary);">Restaurant-Hub: Die besten & getesteten</h2>
+                <p class="text-sm mb-3" style="color: var(--text-secondary);">Sichtbarkeit: Hoch (0,05% / 0,02%) | Keywords: <span class="font-semibold">bochum geht aus, restaurant side bochum kritik</span></p>
+                <a href="https://www.waz.de/lokales/bochum/article408904383/essen-gehen-in-bochum-diese-restaurants-haben-wir-getestet.html" target="_blank" class="text-accent-primary hover:text-accent-primary-hover text-sm break-all">Link zur Quelle (Hub)</a>
+                <hr class="my-4" style="border-color: var(--border-color);">
+                <h3 class="font-bold text-lg text-accent-primary mb-2">Begründung für Evergreen</h3>
+                <p style="color: var(--text-primary);">
+                    <span class="font-bold">Perfekter zentraler Hub-Artikel (Top-Kandidat).</span> Er bündelt alle Restaurant-Tests, ist ganzjährig relevant und muss stetig um neue Tests erweitert werden, um maximale organische Sichtbarkeit zu gewährleisten.
+                </p>
+            </div>
+            
+            <!-- ======================= AUGUST ======================= -->
+            <div id="august" class="month-header">
+                <h2 class="text-3xl font-extrabold" style="color: var(--text-primary);">August</h2>
+            </div>
+            
+            <!-- Artikel: Kein Kita-Platz? -->
+            <div class="section-card">
+                <h2 class="text-2xl font-bold mb-2" style="color: var(--text-primary);">Kein Kita-Platz? (Ratgeber)</h2>
+                <p class="text-sm mb-3" style="color: var(--text-secondary);">Sichtbarkeit: 0,05% | Keyword: <span class="font-semibold">kita portal bochum</span></p>
+                <a href="https://www.waz.de/lokales/bochum/article406862916/kein-kita-platz-ab-1-august-das-koennen-bochumer-eltern-tun.html" target="_blank" class="text-accent-primary hover:text-accent-primary-hover text-sm break-all">Link zur Quelle</a>
+                <hr class="my-4" style="border-color: var(--border-color);">
+                <h3 class="font-bold text-lg text-accent-primary mb-2">Begründung für Evergreen</h3>
+                <p style="color: var(--text-primary);">
+                    <span class="font-bold">Hoher emotionaler Service-Wert</span> für betroffene Eltern. Relevant in der Hauptplanungsphase (Januar/August). Muss mit aktuellen Anlaufstellen, Kontakten und Fristen angereichert werden.
+                </p>
+            </div>
+            
+            <!-- ======================= SEPTEMBER ======================= -->
+            <div id="september" class="month-header">
+                <h2 class="text-3xl font-extrabold" style="color: var(--text-primary);">September</h2>
+            </div>
+            
+            <!-- Artikel: Indoor-Ausflugstipps -->
+            <div class="section-card">
+                <h2 class="text-2xl font-bold mb-2" style="color: var(--text-primary);">Indoor-Ausflugstipps bei Regen</h2>
+                <p class="text-sm mb-3" style="color: var(--text-secondary);">Sichtbarkeit: 0,37% | Keyword: <span class="font-semibold">indoor spielplatz bochum</span></p>
+                <a href="https://www.waz.de/lokales/bochum/article405111344/bochum-freizeit-ausflugstipps-regen-indoor-drinnen-schlechtes-wetter.html" target="_blank" class="text-accent-primary hover:text-accent-primary-hover text-sm break-all">Link zur Quelle</a>
+                <hr class="my-4" style="border-color: var(--border-color);">
+                <h3 class="font-bold text-lg text-accent-primary mb-2">Begründung für Evergreen</h3>
+                <p style="color: var(--text-primary);">
+                    Hochwertiger, <span class="font-bold">anti-saisonaler Evergreen</span> für Familien. Muss zum Ende der Sommerferien (September) aktualisiert werden, da die Nachfrage nach Indoor-Aktivitäten zum Beginn der Schlechtwetter-Saison stark ansteigt.
+                </p>
+            </div>
+            
+            <!-- ======================= OKTOBER ======================= -->
+            <div id="oktober" class="month-header">
+                <h2 class="text-3xl font-extrabold" style="color: var(--text-primary);">Oktober</h2>
+            </div>
+            
+            <!-- Artikel: Bochum schön und hässlich -->
+            <div class="section-card">
+                <h2 class="text-2xl font-bold mb-2" style="color: var(--text-primary);">Bochum schön und hässlich (Orte)</h2>
+                <p class="text-sm mb-3" style="color: var(--text-secondary);">Sichtbarkeit: 0,03% | Keyword: <span class="font-semibold">bochum hässlich</span></p>
+                <a href="https://www.waz.de/lokales/bochum/article406661067/bochum-schoen-und-haesslich-diese--orte-polarisieren.html" target="_blank" class="text-accent-primary hover:text-accent-primary-hover text-sm break-all">Link zur Quelle</a>
+                <hr class="my-4" style="border-color: var(--border-color);">
+                <h3 class="font-bold text-lg text-accent-primary mb-2">Begründung für Evergreen</h3>
+                <p style="color: var(--text-primary);">
+                    <span class="font-bold">Diskussionsanregender, emotionaler Content.</span> Funktioniert jederzeit als Evergreen. Muss nur bei großen städtebaulichen Veränderungen angepasst werden.
+                </p>
+            </div>
+            
+            <!-- ======================= NOVEMBER ======================= -->
+            <div id="november" class="month-header">
+                <h2 class="text-3xl font-extrabold" style="color: var(--text-primary);">November</h2>
+            </div>
+
+            <!-- Artikel: Apotheken-Notdienst -->
+            <div class="section-card">
+                <h2 class="text-2xl font-bold mb-2" style="color: var(--text-primary);">Apotheken-Notdienst</h2>
+                <p class="text-sm mb-3" style="color: var(--text-secondary);">Sichtbarkeit: 0,19% | Keyword: <span class="font-semibold">notfallapotheke bochum</span></p>
+                <a href="https://www.waz.de/lokales/bochum/article401479567/apotheken-notdienst-in-bochum-wer-hatgeoeffnet.html" target="_blank" class="text-accent-primary hover:text-accent-primary-hover text-sm break-all">Link zur Quelle</a>
+                <hr class="my-4" style="border-color: var(--border-color);">
+                <h3 class="font-bold text-lg text-accent-primary mb-2">Begründung für Evergreen</h3>
+                <p style="color: var(--text-primary);">
+                    <span class="font-bold">Essenzieller, ganzjähriger Service</span>, bei dem Aktualität überlebenswichtig ist. Das Update zum Start der Erkältungssaison (November) ist optimal. Sollte stets einen Link zur offiziellen Notdienst-Suche enthalten.
+                </p>
+            </div>
+
+        </div>
+
+        <footer class="mt-8 pt-4 text-center border-t" style="color: var(--text-secondary); border-color: var(--border-color);">
+            <p>Evergreen SEO Katalog | FUNKE Mediengruppe</p>
+        </footer>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const toggleButton = document.getElementById('schul-check-toggle');
+            const linkContainer = document.getElementById('schul-check-links');
+            const toggleIcon = document.getElementById('toggle-icon');
+            
+            if (toggleButton && linkContainer && toggleIcon) {
+                linkContainer.style.maxHeight = '0';
+
+                toggleButton.addEventListener('click', () => {
+                    const isExpanded = toggleButton.getAttribute('aria-expanded') === 'true';
+
+                    if (isExpanded) {
+                        linkContainer.style.maxHeight = linkContainer.scrollHeight + 'px';
+                        requestAnimationFrame(() => {
+                            linkContainer.style.maxHeight = '0';
+                        });
+                        setTimeout(() => {
+                            linkContainer.classList.add('hidden');
+                        }, 300);
+                        toggleButton.setAttribute('aria-expanded', 'false');
+                        toggleIcon.style.transform = 'rotate(0deg)';
+                    } else {
+                        linkContainer.classList.remove('hidden');
+                        linkContainer.style.maxHeight = linkContainer.scrollHeight + 'px';
+                        toggleButton.setAttribute('aria-expanded', 'true');
+                        toggleIcon.style.transform = 'rotate(180deg)';
+                        linkContainer.addEventListener('transitionend', function handler() {
+                            if (toggleButton.getAttribute('aria-expanded') === 'true') {
+                                linkContainer.style.maxHeight = 'none';
+                            }
+                            linkContainer.removeEventListener('transitionend', handler);
+                        });
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>
+
